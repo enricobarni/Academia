@@ -83,11 +83,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IHMcadastro.cs">
+    <Compile Include="AcademiaBLL.cs" />
+    <Compile Include="Erro.cs" />
+    <Compile Include="IHMCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IHMcadastro.Designer.cs">
-      <DependentUpon>IHMcadastro.cs</DependentUpon>
+    <Compile Include="IHMCadastro.Designer.cs">
+      <DependentUpon>IHMCadastro.cs</DependentUpon>
     </Compile>
     <Compile Include="IHMLogin.cs">
       <SubType>Form</SubType>
@@ -95,10 +97,11 @@
     <Compile Include="IHMLogin.Designer.cs">
       <DependentUpon>IHMLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login_Cadastro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="IHMcadastro.resx">
-      <DependentUpon>IHMcadastro.cs</DependentUpon>
+    <EmbeddedResource Include="IHMCadastro.resx">
+      <DependentUpon>IHMCadastro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IHMLogin.resx">
       <DependentUpon>IHMLogin.cs</DependentUpon>
