@@ -3,32 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Academia\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|C:\\Users\\User\\Desktop\\Academia\\loginacademia\\ihmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|solutionrelative:loginacademia\\ihmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|C:\\Users\\User\\Desktop\\Academia\\loginacademia\\academiabll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|solutionrelative:loginacademia\\academiabll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|C:\\Users\\User\\Desktop\\Academia\\loginacademia\\ihmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|solutionrelative:loginacademia\\ihmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|C:\\Users\\User\\Desktop\\Academia\\loginacademia\\ihmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|solutionrelative:loginacademia\\ihmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|c:\\users\\user\\desktop\\academia\\loginacademia\\ihmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|solutionrelative:loginacademia\\ihmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|c:\\users\\user\\desktop\\academia\\loginacademia\\ihmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|solutionrelative:loginacademia\\ihmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|c:\\users\\user\\desktop\\academia\\loginacademia\\ihmcadastro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|solutionrelative:loginacademia\\ihmcadastro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|c:\\users\\user\\desktop\\academia\\loginacademia\\ihmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|solutionrelative:loginacademia\\ihmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|c:\\users\\user\\desktop\\academia\\loginacademia\\endereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|solutionrelative:loginacademia\\endereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|c:\\users\\user\\desktop\\academia\\loginacademia\\ihmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|solutionrelative:loginacademia\\ihmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|c:\\users\\user\\desktop\\academia\\loginacademia\\academiabll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|solutionrelative:loginacademia\\academiabll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|c:\\users\\user\\desktop\\academia\\loginacademia\\login_cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|C:\\Users\\User\\Desktop\\Academia\\loginacademia\\login_cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|solutionrelative:loginacademia\\login_cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|c:\\users\\user\\desktop\\academia\\loginacademia\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D834D160-260F-4FBE-9D3E-2416379240BD}|LoginAcademia\\LoginAcademia.csproj|solutionrelative:loginacademia\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,11 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "IHMLogin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Academia\\LoginAcademia\\IHMLogin.cs",
               "RelativeDocumentMoniker": "LoginAcademia\\IHMLogin.cs",
@@ -55,7 +59,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "IHMCadastro.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Academia\\LoginAcademia\\IHMCadastro.cs",
               "RelativeDocumentMoniker": "LoginAcademia\\IHMCadastro.cs",
@@ -68,13 +72,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "IHMLogin.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Academia\\LoginAcademia\\IHMLogin.cs",
               "RelativeDocumentMoniker": "LoginAcademia\\IHMLogin.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Academia\\LoginAcademia\\IHMLogin.cs",
               "RelativeToolTip": "LoginAcademia\\IHMLogin.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowCwAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwDIAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-16T21:20:38.116Z",
               "IsPinned": true,
@@ -82,13 +86,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "IHMCadastro.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Academia\\LoginAcademia\\IHMCadastro.cs",
               "RelativeDocumentMoniker": "LoginAcademia\\IHMCadastro.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Academia\\LoginAcademia\\IHMCadastro.cs",
               "RelativeToolTip": "LoginAcademia\\IHMCadastro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAuwLsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-16T21:32:14.004Z",
               "IsPinned": true,
@@ -96,13 +100,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "AcademiaBLL.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Academia\\LoginAcademia\\AcademiaBLL.cs",
               "RelativeDocumentMoniker": "LoginAcademia\\AcademiaBLL.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Academia\\LoginAcademia\\AcademiaBLL.cs",
               "RelativeToolTip": "LoginAcademia\\AcademiaBLL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALsAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAQwHEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-16T21:22:24.278Z",
               "IsPinned": true,
@@ -111,6 +115,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "IHMCadastro.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Academia\\LoginAcademia\\IHMcadastro.Designer.cs",
+              "RelativeDocumentMoniker": "LoginAcademia\\IHMcadastro.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Academia\\LoginAcademia\\IHMcadastro.Designer.cs",
+              "RelativeToolTip": "LoginAcademia\\IHMcadastro.Designer.cs",
+              "ViewState": "AgIAAHcDAAAAAAAAAADwv48DAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T19:54:56.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Endereco.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Academia\\LoginAcademia\\Endereco.cs",
+              "RelativeDocumentMoniker": "LoginAcademia\\Endereco.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Academia\\LoginAcademia\\Endereco.cs",
+              "RelativeToolTip": "LoginAcademia\\Endereco.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T18:49:00.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Login_Cadastro.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Academia\\LoginAcademia\\Login_Cadastro.cs",
               "RelativeDocumentMoniker": "LoginAcademia\\Login_Cadastro.cs",
@@ -119,19 +149,6 @@
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-17T00:02:43.633Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Academia\\LoginAcademia\\Program.cs",
-              "RelativeDocumentMoniker": "LoginAcademia\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Academia\\LoginAcademia\\Program.cs",
-              "RelativeToolTip": "LoginAcademia\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T21:35:47.916Z",
               "EditorCaption": ""
             }
           ]
