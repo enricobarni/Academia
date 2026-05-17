@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Net.Http;
+using System.Text.Json;               
+using System.Text.Json.Serialization;
 
 namespace LoginAcademia
 {
@@ -98,6 +101,59 @@ namespace LoginAcademia
         }
 
         //Validação CEP
+
+        public static async Task<Endereco> buscarcepinternet(string txtCep)
+        {
+            // Valida o formato antes de gastar internet à toa
+            validacaocep(txtCep);
+
+            // Limpa formatação para a URL
+            string cepLimpo = Regex.Replace(txtCep, @"\D", "");
+
+            using (HttpClient client = new HttpClient())
+            {
+                try
+                {
+                    string url = $"https://viacep.com.br/ws/{cepLimpo}/json/";
+                    HttpResponseMessage response = await client.GetAsync(url);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string jsonString = await response.Content.ReadAsStringAsync();
+
+                        // O ViaCEP retorna o campo "erro": true dentro do JSON caso o CEP não exista
+                        if (jsonString.Contains("\"erro\":") || jsonString.Contains("true"))
+                        {
+                            Erro.setErro(true);
+                            Erro.setMsg("CEP não encontrado na base de dados!");
+                            return null;
+                        }
+
+                        // Configuração opcional para ignorar maiúsculas/minúsculas se necessário
+                        var options = new JsonSerializerOptions
+                        {
+                            PropertyNameCaseInsensitive = true
+                        };
+
+                        // DESSERIALIZAÇÃO: Transforma o texto JSON no objeto Endereco do C#
+                        Endereco end = JsonSerializer.Deserialize<Endereco>(jsonString, options);
+                        return end;
+                    }
+                    else
+                    {
+                        Erro.setErro(true);
+                        Erro.setMsg("Falha ao conectar com o serviço de CEP.");
+                        return null;
+                    }
+                }
+                catch (Exception)
+                {
+                    Erro.setErro(true);
+                    Erro.setMsg("Erro de conexão. Verifique sua internet.");
+                    return null;
+                }
+            }
+        }
         public static void validacaocep(string txtCep)
         {
             Erro.setErro(false);

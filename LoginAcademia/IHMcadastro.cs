@@ -13,6 +13,7 @@ namespace LoginAcademia
     public partial class IHMCadastro: Form
     {
         Login_Cadastro academia = new Login_Cadastro();
+        Endereco endereco = new Endereco();
         public IHMCadastro()
         {
             InitializeComponent();
@@ -47,7 +48,6 @@ namespace LoginAcademia
             academia.setEmail(txtEmail.Text);
             academia.setSenha(txtSenha.Text);
             academia.setTelefone(txtTelefone.Text);
-            academia.setCep(txtCep.Text);
             AcademiaBLL.validacaonome(txtNome.Text);
             if (Erro.getErro())
             {
@@ -88,6 +88,8 @@ namespace LoginAcademia
             if (possuiErro)
                 return;
 
+            MessageBox.Show("Cadastro realizado com sucesso!");
+
         }
         private void txtTelefone_TextChanged(object sender, EventArgs e)
         {
@@ -114,6 +116,25 @@ namespace LoginAcademia
 
             // Opcional: esconder o formulário atual
             this.Hide();
+        }
+
+        private async void btnBucarCep_Click(object sender, EventArgs e)
+        {
+            endereco.setCep(txtCep.Text);
+
+            Endereco enderecoPreenchido = await AcademiaBLL.buscarcepinternet(txtCep.Text);
+
+            if (enderecoPreenchido != null)
+            {
+                txtRua.Text = enderecoPreenchido.getRua();
+                txtBairro.Text = enderecoPreenchido.getBairro();
+                txtCidade.Text = enderecoPreenchido.getCidade();
+                txtEstado.Text = enderecoPreenchido.getEstado();
+            }
+            else
+            {
+                MessageBox.Show(Erro.getMsg(), "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

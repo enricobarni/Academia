@@ -27,9 +27,5 @@ namespace LoginAcademia
         private string telefone;
         public void setTelefone(string _telefone) { telefone = _telefone; }
         public string getTelefone() { return telefone; }
-
-        private string cep;
-        public void setCep(string _cep) { cep = _cep; }
-        public string getCep() { return cep; }
     }
 }
