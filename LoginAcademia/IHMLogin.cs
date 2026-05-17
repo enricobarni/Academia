@@ -44,6 +44,13 @@ namespace LoginAcademia
                 lblErroUsuario.Visible = true;
                 possuiErro = true;
             }
+            AcademiaBLL.validacaosenha(txtSenha.Text);
+            if (Erro.getErro())
+            {
+                lblErroSenha.Text = Erro.getMsg();
+                lblErroSenha.Visible = true;
+                possuiErro = true;
+            }
 
             // Se houver qualquer erro, não continua
             if (possuiErro)

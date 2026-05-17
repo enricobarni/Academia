@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace LoginAcademia
 {
-    public partial class IHMCadastro: Form
+    public partial class IHMCadastro : Form
     {
         Login_Cadastro academia = new Login_Cadastro();
         Endereco endereco = new Endereco();
@@ -24,6 +24,9 @@ namespace LoginAcademia
             lblErroConfirmarsenha.Visible = false;
             lblErroTelefone.Visible = false;
             lblErroCep.Visible = false;
+            lblErroCep2.Visible = false;
+            lblErroNumero.Visible = false;
+            lblErroComplemento.Visible = false;
         }
 
         private void IHMcadastro_Load(object sender, EventArgs e)
@@ -36,10 +39,14 @@ namespace LoginAcademia
         private void btnCriarContaCadastro_Click(object sender, EventArgs e)
         {
             lblErroNome.Text = "";
+            lblErroUsuario.Text = "";
             lblErroEmail.Text = "";
             lblErroSenha.Text = "";
+            lblErroConfirmarsenha.Text = "";
             lblErroTelefone.Text = "";
             lblErroCep.Text = "";
+            lblErroNumero.Text = "";
+            lblErroComplemento.Text = "";
 
             bool possuiErro = false;
 
@@ -69,6 +76,20 @@ namespace LoginAcademia
                 lblErroEmail.Visible = true;
                 possuiErro = true;
             }
+            AcademiaBLL.validacaosenha(txtSenha.Text);
+            if (Erro.getErro())
+            {
+                lblErroSenha.Text = Erro.getMsg();
+                lblErroSenha.Visible = true;
+                possuiErro = true;
+            }
+            AcademiaBLL.validacaoconfirmarsenha(txtSenha.Text, txtConfirmarsenha.Text);
+            if (Erro.getErro())
+            {
+                lblErroConfirmarsenha.Text = Erro.getMsg();
+                lblErroConfirmarsenha.Visible = true;
+                possuiErro = true;
+            }
             AcademiaBLL.validacaotelefone(txtTelefone.Text);
             if (Erro.getErro())
             {
@@ -82,6 +103,19 @@ namespace LoginAcademia
                 lblErroCep.Text = Erro.getMsg();
                 lblErroCep.Visible = true;
                 possuiErro = true;
+            }
+            AcademiaBLL.validacaonumero(txtNumero.Text);
+            if (Erro.getErro())
+            {
+                lblErroNumero.Text = Erro.getMsg();
+                lblErroNumero.Visible = true;
+                possuiErro = true;
+            }
+            if (!cepBuscado)
+            {
+                lblErroCep2.Text = "Busque o CEP antes de criar a conta!";
+                lblErroCep2.Visible = true;
+                return;
             }
 
             // Se houver qualquer erro, não continua
@@ -104,6 +138,14 @@ namespace LoginAcademia
         {
             txtCep.Text = AcademiaBLL.formatacaocep(txtCep.Text);
             txtCep.SelectionStart = txtCep.Text.Length;
+
+            cepBuscado = false; // mudou o CEP → precisa buscar novamente
+        }
+
+        private void txtNumero_TextChanged(object sender, EventArgs e)
+        {
+            txtNumero.Text = AcademiaBLL.formatacaonumero(txtNumero.Text);
+            txtNumero.SelectionStart = txtNumero.Text.Length;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -118,9 +160,12 @@ namespace LoginAcademia
             this.Hide();
         }
 
+        bool cepBuscado = false;
         private async void btnBucarCep_Click(object sender, EventArgs e)
         {
             endereco.setCep(txtCep.Text);
+            lblErroCep2.Visible = false;
+            lblErroCep2.Text = "";
 
             Endereco enderecoPreenchido = await AcademiaBLL.buscarcepinternet(txtCep.Text);
 
@@ -130,10 +175,14 @@ namespace LoginAcademia
                 txtBairro.Text = enderecoPreenchido.getBairro();
                 txtCidade.Text = enderecoPreenchido.getCidade();
                 txtEstado.Text = enderecoPreenchido.getEstado();
+
+                cepBuscado = true; // marca que o usuario buscou o cep
             }
             else
             {
-                MessageBox.Show(Erro.getMsg(), "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lblErroCep2.Text = Erro.getMsg();
+                lblErroCep2.Visible = true;
+                cepBuscado = false; // marca que o usuario não buscou o cep
             }
         }
     }
