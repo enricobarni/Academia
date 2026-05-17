@@ -16,7 +16,7 @@ namespace LoginAcademia
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new IHMLogin()); //Muda o nme aqui pra qual design quer rodar
+            Application.Run(new IHMLogin()); //Muda o nome aqui pra qual design quer rodar
         }
     }
 }
