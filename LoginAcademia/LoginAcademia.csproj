@@ -127,6 +127,12 @@
     <Compile Include="IHMCadastro.Designer.cs">
       <DependentUpon>IHMCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="IHMPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHMPerfil.Designer.cs">
+      <DependentUpon>IHMPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="IHMLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="IHMCadastro.resx">
       <DependentUpon>IHMCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHMPerfil.resx">
+      <DependentUpon>IHMPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IHMLogin.resx">
       <DependentUpon>IHMLogin.cs</DependentUpon>

@@ -17,16 +17,6 @@ namespace LoginAcademia
         public IHMCadastro()
         {
             InitializeComponent();
-            lblErroNome.Visible = false;
-            lblErroUsuario.Visible = false;
-            lblErroEmail.Visible = false;
-            lblErroSenha.Visible = false;
-            lblErroConfirmarsenha.Visible = false;
-            lblErroTelefone.Visible = false;
-            lblErroCep.Visible = false;
-            lblErroCep2.Visible = false;
-            lblErroNumero.Visible = false;
-            lblErroComplemento.Visible = false;
         }
 
         private void IHMcadastro_Load(object sender, EventArgs e)
