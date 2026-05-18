@@ -132,6 +132,11 @@
     </Compile>
     <Compile Include="IHMCliente.Designer.cs">
       <DependentUpon>IHMCliente.cs</DependentUpon>
+    <Compile Include="IHMPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHMPerfil.Designer.cs">
+      <DependentUpon>IHMPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="IHMLogin.cs">
       <SubType>Form</SubType>
@@ -147,6 +152,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IHMCliente.resx">
       <DependentUpon>IHMCliente.cs</DependentUpon>
+    <EmbeddedResource Include="IHMPerfil.resx">
+      <DependentUpon>IHMPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IHMLogin.resx">
       <DependentUpon>IHMLogin.cs</DependentUpon>
