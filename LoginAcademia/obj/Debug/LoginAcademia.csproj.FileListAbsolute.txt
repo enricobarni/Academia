@@ -60,3 +60,35 @@ C:\Users\enric\source\repos\Academia\LoginAcademia\bin\Debug\System.Text.Encodin
 C:\Users\enric\source\repos\Academia\LoginAcademia\bin\Debug\System.Text.Json.xml
 C:\Users\enric\source\repos\Academia\LoginAcademia\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\enric\source\repos\Academia\LoginAcademia\obj\Debug\LoginAca.11742870.Up2Date
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\LoginAcademia.exe.config
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\LoginAcademia.exe
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\LoginAcademia.pdb
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\Guna.UI2.dll
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\System.Buffers.dll
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\System.IO.Pipelines.dll
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\System.Memory.dll
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\System.Text.Json.dll
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\System.Buffers.xml
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\System.IO.Pipelines.xml
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\System.Memory.xml
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\System.Text.Json.xml
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\obj\Debug\LoginAcademia.csproj.AssemblyReference.cache
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\obj\Debug\LoginAcademia.IHMCadastro.resources
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\obj\Debug\LoginAcademia.IHMLogin.resources
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\obj\Debug\LoginAcademia.Properties.Resources.resources
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\obj\Debug\LoginAcademia.csproj.GenerateResource.cache
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\obj\Debug\LoginAcademia.csproj.CoreCompileInputs.cache
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\obj\Debug\LoginAca.11742870.Up2Date
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\obj\Debug\LoginAcademia.exe
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\obj\Debug\LoginAcademia.pdb
+C:\Users\roste\OneDrive\Área de Trabalho\Academia\LoginAcademia\obj\Debug\LoginAcademia.IHMCliente.resources

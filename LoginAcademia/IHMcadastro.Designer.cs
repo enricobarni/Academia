@@ -72,7 +72,7 @@
             // pnCadastro
             // 
             this.pnCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
+            this.pnCadastro.BackColor = System.Drawing.Color.Transparent;
             this.pnCadastro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.pnCadastro.BorderRadius = 30;
             this.pnCadastro.BorderThickness = 2;

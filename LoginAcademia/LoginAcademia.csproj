@@ -127,6 +127,12 @@
     <Compile Include="IHMCadastro.Designer.cs">
       <DependentUpon>IHMCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="IHMCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHMCliente.Designer.cs">
+      <DependentUpon>IHMCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="IHMLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="IHMCadastro.resx">
       <DependentUpon>IHMCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHMCliente.resx">
+      <DependentUpon>IHMCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IHMLogin.resx">
       <DependentUpon>IHMLogin.cs</DependentUpon>
@@ -198,6 +207,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconesCep.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconmonstr-log-out-18-240.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-workout-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_n0tbyxn0tbyxn0tb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\halter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\halter-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perfil-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets" Condition="Exists('..\packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" />
