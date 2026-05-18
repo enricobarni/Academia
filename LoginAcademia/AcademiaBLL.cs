@@ -50,12 +50,12 @@ namespace LoginAcademia
             Erro.setErro(false);
             if (string.IsNullOrWhiteSpace(txtNumero))
             {
-                Erro.setMsg("O Numero é inválido!");
+                Erro.setMsg("O Telefone é inválido!");
                 return;
             }
             if (!Regex.IsMatch(txtNumero, @"^\(\d{2}\)\s\d{5}-\d{4}$"))
             {
-                Erro.setMsg("O Numero é inválido!");
+                Erro.setMsg("O Telefone é inválido!");
                 return;
             }
         }
@@ -107,6 +107,11 @@ namespace LoginAcademia
             // Valida o formato antes de gastar internet à toa
             validacaocep(txtCep);
 
+            if (Erro.getErro())
+            {
+                return null;
+            }
+
             // Limpa formatação para a URL
             string cepLimpo = Regex.Replace(txtCep, @"\D", "");
 
@@ -125,7 +130,7 @@ namespace LoginAcademia
                         if (jsonString.Contains("\"erro\":") || jsonString.Contains("true"))
                         {
                             Erro.setErro(true);
-                            Erro.setMsg("CEP não encontrado na base de dados!");
+                            Erro.setMsg("CEP Não Foi Encontrado!");
                             return null;
                         }
 
@@ -142,14 +147,14 @@ namespace LoginAcademia
                     else
                     {
                         Erro.setErro(true);
-                        Erro.setMsg("Falha ao conectar com o serviço de CEP.");
+                        Erro.setMsg("Falha ao conectar com o serviço de CEP!");
                         return null;
                     }
                 }
                 catch (Exception)
                 {
                     Erro.setErro(true);
-                    Erro.setMsg("Erro de conexão. Verifique sua internet.");
+                    Erro.setMsg("Erro de conexão. Verifique sua internet!");
                     return null;
                 }
             }
@@ -260,6 +265,52 @@ namespace LoginAcademia
                 {
                     ultimoFoiEspaco = false;
                 }
+            }
+        }
+
+        //Validação Senha
+        public static void validacaosenha(string txtSenha)
+        {
+            Erro.setErro(false);
+            if (string.IsNullOrWhiteSpace(txtSenha))
+            {
+                Erro.setMsg("A Senha é inválida!");
+                return;
+            }
+        }
+
+        //Validação Confirmar Senha
+        public static void validacaoconfirmarsenha(string senha, string confirmarSenha)
+        {
+            Erro.setErro(false);
+
+            if (string.IsNullOrWhiteSpace(confirmarSenha))
+            {
+                Erro.setMsg("Confirme a senha!");
+                return;
+            }
+
+            if (senha != confirmarSenha)
+            {
+                Erro.setMsg("As Senhas Não São Iguais!");
+                return;
+            }
+        }
+        //Formatação Numero Da Casa
+        public static string formatacaonumero(string txtNumero)
+        {
+            txtNumero = Regex.Replace(txtNumero, @"\D", "");
+            return txtNumero;
+        }
+        //Validação Numero Da Residencia
+        public static void validacaonumero(string txtNumero)
+        {
+            Erro.setErro(false);
+
+            if (string.IsNullOrWhiteSpace(txtNumero))
+            {
+                Erro.setMsg("O Nº é inválido!");
+                return;
             }
         }
     }
