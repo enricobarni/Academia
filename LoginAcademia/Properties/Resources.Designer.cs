@@ -83,6 +83,16 @@ namespace LoginAcademia.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_19_de_mai__de_2026__17_11_20 {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image 19 de mai. de 2026, 17_11_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gemini_Generated_Image_n0tbyxn0tbyxn0tb {
             get {
                 object obj = ResourceManager.GetObject("Gemini_Generated_Image_n0tbyxn0tbyxn0tb", resourceCulture);

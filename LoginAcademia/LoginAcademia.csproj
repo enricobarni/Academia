@@ -118,6 +118,12 @@
     <Compile Include="AcademiaDAL.cs" />
     <Compile Include="Endereco.cs" />
     <Compile Include="Erro.cs" />
+    <Compile Include="IHMAdm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHMAdm1.Designer.cs">
+      <DependentUpon>IHMAdm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="IHMCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     <Compile Include="Login_Cadastro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="IHMAdm1.resx">
+      <DependentUpon>IHMAdm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IHMCadastro.resx">
       <DependentUpon>IHMCadastro.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +189,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image 19 de mai. de 2026, 17_11_20.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets" Condition="Exists('..\packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" />
