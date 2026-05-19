@@ -22,8 +22,28 @@ namespace LoginAcademia
 
         private void IHMCliente_Load(object sender, EventArgs e)
         {
-            // Exemplo: mostrar nome na tela
-            // lblNome.Text = "Bem-vindo, " + usuarioLogado.getNome();
+            // Primeiro nome apenas
+            string nomeCompleto = usuarioLogado.getNome();
+            string primeiroNome = nomeCompleto.Split(' ')[0];
+            lbNomeCliente.Text = primeiroNome + "!";
+
+            // Data de hoje em português
+            lbData.Text = DateTime.Now.ToString("dd 'de' MMMM', 'yyyy",
+                          new System.Globalization.CultureInfo("pt-BR"));
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            IHMPerfil formPerfil = new IHMPerfil(usuarioLogado);
+            formPerfil.Show();
+            this.Close();
+        }
+
+        private void btnSair_Click_1(object sender, EventArgs e)
+        {
+            IHMLogin formLogin = new IHMLogin();
+            formLogin.Show();
+            this.Close();
         }
     }
 }

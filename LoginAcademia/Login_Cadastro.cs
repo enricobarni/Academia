@@ -35,5 +35,13 @@ namespace LoginAcademia
         private bool icAdmin;
         public void setIcAdmin(bool _icAdmin) { icAdmin = _icAdmin; }
         public bool getIcAdmin() { return icAdmin; }
+
+        private bool icAtivo;
+        public void setIcAtivo(bool _icAtivo) { icAtivo = _icAtivo; }
+        public bool getIcAtivo() { return icAtivo; }
+
+        private DateTime dtCadastro;
+        public void setDtCadastro(DateTime _dtCadastro) { dtCadastro = _dtCadastro; }
+        public DateTime getDtCadastro() { return dtCadastro; }
     }
 }

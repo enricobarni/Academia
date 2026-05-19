@@ -36,9 +36,9 @@ namespace LoginAcademia
             conecta();
             if (Erro.getErro()) return;
 
-            string aux = "SELECT cd_usuario, nm_cliente, ds_senha, ic_admin " +
-                         "FROM Usuario " +
-                         "WHERE (ds_email = @login OR nm_usuario = @login) AND ic_ativo = 1";
+            string aux = "SELECT cd_usuario, nm_cliente, ds_senha, ic_admin, ic_ativo, dt_cadastro " +
+             "FROM Usuario " +
+             "WHERE (ds_email = @login OR nm_usuario = @login) AND ic_ativo = 1";
 
             strSQL = new SqlCommand(aux, conn);
             strSQL.Parameters.AddWithValue("@login", lc.getUsuario());
@@ -52,6 +52,8 @@ namespace LoginAcademia
                 lc.setNome(result["nm_cliente"].ToString());
                 lc.setSenha(result["ds_senha"].ToString());
                 lc.setIcAdmin((bool)result["ic_admin"]);
+                lc.setIcAtivo((bool)result["ic_ativo"]);
+                lc.setDtCadastro((DateTime)result["dt_cadastro"]);
             }
             else
             {
@@ -104,6 +106,46 @@ namespace LoginAcademia
                 Erro.setMsg(ex.Message);
             }
 
+            desconecta();
+        }
+        public static void consultaPerfil(Login_Cadastro lc, Endereco end)
+        {
+            conecta();
+            if (Erro.getErro()) return;
+
+            string aux = "SELECT u.nm_cliente, u.ds_email, u.ds_telefone, u.ic_ativo, u.dt_cadastro, " +
+                         "e.ds_rua, e.ds_numero, e.ds_bairro, e.ds_cidade, e.ds_estado, e.ds_cep " +
+                         "FROM Usuario u " +
+                         "INNER JOIN Endereco e ON e.cd_usuario = u.cd_usuario " +
+                         "WHERE u.cd_usuario = @cd_usuario";
+
+            strSQL = new SqlCommand(aux, conn);
+            strSQL.Parameters.AddWithValue("@cd_usuario", lc.getCdUsuario());
+
+            Erro.setErro(false);
+            result = strSQL.ExecuteReader();
+
+            if (result.Read())
+            {
+                lc.setNome(result["nm_cliente"].ToString());
+                lc.setEmail(result["ds_email"].ToString());
+                lc.setTelefone(result["ds_telefone"].ToString());
+                lc.setIcAtivo((bool)result["ic_ativo"]);
+                lc.setDtCadastro((DateTime)result["dt_cadastro"]);
+
+                end.setRua(result["ds_rua"].ToString());
+                end.setNumero(result["ds_numero"].ToString());
+                end.setBairro(result["ds_bairro"].ToString());
+                end.setCidade(result["ds_cidade"].ToString());
+                end.setEstado(result["ds_estado"].ToString());
+                end.setCep(result["ds_cep"].ToString());
+            }
+            else
+            {
+                Erro.setMsg("Perfil não encontrado!");
+            }
+
+            result.Close();
             desconecta();
         }
     }

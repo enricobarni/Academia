@@ -121,6 +121,7 @@
             this.btnPerfil.TabIndex = 34;
             this.btnPerfil.TabStop = false;
             this.btnPerfil.Text = "Perfil";
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnSair
             // 
@@ -146,6 +147,7 @@
             this.btnSair.TabIndex = 35;
             this.btnSair.TabStop = false;
             this.btnSair.Text = "Sair";
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click_1);
             // 
             // btnMeusTreinos
             // 
@@ -353,6 +355,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IHMCliente";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.IHMCliente_Load);
             this.pnLateral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imLogoCliente)).EndInit();
             this.guna2Panel1.ResumeLayout(false);

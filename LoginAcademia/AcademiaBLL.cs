@@ -272,9 +272,40 @@ namespace LoginAcademia
         public static void validacaosenha(string txtSenha)
         {
             Erro.setErro(false);
+
             if (string.IsNullOrWhiteSpace(txtSenha))
             {
                 Erro.setMsg("A Senha é inválida!");
+                return;
+            }
+
+            if (txtSenha.Length < 8)
+            {
+                Erro.setMsg("A senha deve ter no mínimo 8 caracteres!");
+                return;
+            }
+
+            if (!Regex.IsMatch(txtSenha, @"[A-Z]"))
+            {
+                Erro.setMsg("A senha deve ter ao menos uma letra maiúscula!");
+                return;
+            }
+
+            if (!Regex.IsMatch(txtSenha, @"[a-z]"))
+            {
+                Erro.setMsg("A senha deve ter ao menos uma letra minúscula!");
+                return;
+            }
+
+            if (!Regex.IsMatch(txtSenha, @"[0-9]"))
+            {
+                Erro.setMsg("A senha deve ter ao menos um número!");
+                return;
+            }
+
+            if (!Regex.IsMatch(txtSenha, @"[!@#$%^&*()_+\-=\[\]{}|;':"",./<>?]"))
+            {
+                Erro.setMsg("A senha deve ter ao menos um caractere especial!");
                 return;
             }
         }

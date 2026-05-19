@@ -58,7 +58,7 @@ namespace LoginAcademia
 
             if (Erro.getErro())
             {
-                lblErroUsuario.Text = Erro.getMsg();
+                lblErroUsuario.Text = "Usuário ou senha incorretos!";
                 lblErroUsuario.Visible = true;
                 return;
             }
@@ -66,7 +66,9 @@ namespace LoginAcademia
             // Verifica a senha com BCrypt
             if (!BCrypt.Net.BCrypt.Verify(txtSenha.Text, academia.getSenha()))
             {
-                lblErroSenha.Text = "Senha incorreta!";
+                lblErroUsuario.Text = "Usuário ou senha incorretos!";
+                lblErroUsuario.Visible = true;
+                lblErroSenha.Text = "Usuário ou senha incorretos!";
                 lblErroSenha.Visible = true;
                 return;
             }
