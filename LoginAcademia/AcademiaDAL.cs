@@ -10,11 +10,10 @@ namespace LoginAcademia
     public class AcademiaDAL
     {
         private static string strConexao =
-            "Server=.\\SQLEXPRESS;" +
-            "AttachDbFilename=|DataDirectory|AcademiaBD.mdf;" +
-            "Database=AcademiaBD;" +
-            "Integrated Security=True;" +
-            "TrustServerCertificate=True;";
+    "Data Source=(LocalDB)\\MSSQLLocalDB;" +
+    "AttachDbFilename=|DataDirectory|\\BDacademia\\AcademiaBD.mdf;" +
+    "Integrated Security=True;" +
+    "Connect Timeout=30;";
 
         private static SqlConnection conn = new SqlConnection(strConexao);
         private static SqlCommand strSQL;
@@ -22,8 +21,17 @@ namespace LoginAcademia
 
         private static void conecta()
         {
-            try { conn.Open(); }
-            catch (Exception) { Erro.setMsg("Erro ao conectar ao Banco de Dados!"); }
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                {
+                    conn.Open();
+                }
+            }
+            catch (Exception ex)
+            {
+                Erro.setMsg(ex.Message);
+            }
         }
 
         private static void desconecta()
