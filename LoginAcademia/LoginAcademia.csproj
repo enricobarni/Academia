@@ -118,6 +118,12 @@
     <Compile Include="AcademiaDAL.cs" />
     <Compile Include="Endereco.cs" />
     <Compile Include="Erro.cs" />
+    <Compile Include="IHMAdm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHMAdm2.Designer.cs">
+      <DependentUpon>IHMAdm2.cs</DependentUpon>
+    </Compile>
     <Compile Include="IHMCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     <Compile Include="Login_Cadastro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="IHMAdm2.resx">
+      <DependentUpon>IHMAdm2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IHMCadastro.resx">
       <DependentUpon>IHMCadastro.cs</DependentUpon>
     </EmbeddedResource>

@@ -34,25 +34,25 @@
             this.btnPerfil = new Guna.UI2.WinForms.Guna2Button();
             this.btnSair = new Guna.UI2.WinForms.Guna2Button();
             this.btnMeusTreinos = new Guna.UI2.WinForms.Guna2Button();
-            this.imLogoCliente = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbSubtituloCliente = new System.Windows.Forms.Label();
             this.lbMeusTreinos = new System.Windows.Forms.Label();
-            this.imHalter = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnPrincipal = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbData = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbDescricaoCliente = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.imPrancheta = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbSubtitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbNomeCliente = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbOla = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.imPrancheta = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.imLogoCliente = new System.Windows.Forms.PictureBox();
+            this.imHalter = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnLateral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imLogoCliente)).BeginInit();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imHalter)).BeginInit();
             this.pnPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imPrancheta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imLogoCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imHalter)).BeginInit();
             this.SuspendLayout();
             // 
             // pnLateral
@@ -68,9 +68,9 @@
             this.pnLateral.Controls.Add(this.btnSair);
             this.pnLateral.Controls.Add(this.btnMeusTreinos);
             this.pnLateral.Controls.Add(this.imLogoCliente);
-            this.pnLateral.Location = new System.Drawing.Point(3, 0);
+            this.pnLateral.Location = new System.Drawing.Point(0, 0);
             this.pnLateral.Name = "pnLateral";
-            this.pnLateral.Size = new System.Drawing.Size(300, 880);
+            this.pnLateral.Size = new System.Drawing.Size(303, 1092);
             this.pnLateral.TabIndex = 1;
             this.pnLateral.UseTransparentBackground = true;
             // 
@@ -78,11 +78,11 @@
             // 
             this.lbTitulo2.AutoSize = false;
             this.lbTitulo2.BackColor = System.Drawing.Color.Transparent;
-            this.lbTitulo2.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitulo2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbTitulo2.Location = new System.Drawing.Point(79, 131);
+            this.lbTitulo2.Location = new System.Drawing.Point(87, 96);
             this.lbTitulo2.Name = "lbTitulo2";
-            this.lbTitulo2.Size = new System.Drawing.Size(174, 39);
+            this.lbTitulo2.Size = new System.Drawing.Size(138, 39);
             this.lbTitulo2.TabIndex = 37;
             this.lbTitulo2.Text = "EVOLUÇÃO";
             // 
@@ -90,9 +90,9 @@
             // 
             this.lbTitulo1.AutoSize = false;
             this.lbTitulo1.BackColor = System.Drawing.Color.Transparent;
-            this.lbTitulo1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.lbTitulo1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbTitulo1.Location = new System.Drawing.Point(97, 105);
+            this.lbTitulo1.Location = new System.Drawing.Point(101, 74);
             this.lbTitulo1.Name = "lbTitulo1";
             this.lbTitulo1.Size = new System.Drawing.Size(124, 35);
             this.lbTitulo1.TabIndex = 36;
@@ -110,14 +110,14 @@
             this.btnPerfil.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnPerfil.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
             this.btnPerfil.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.btnPerfil.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnPerfil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnPerfil.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.btnPerfil.Location = new System.Drawing.Point(3, 269);
+            this.btnPerfil.Location = new System.Drawing.Point(1, 269);
             this.btnPerfil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
-            this.btnPerfil.Size = new System.Drawing.Size(294, 77);
+            this.btnPerfil.Size = new System.Drawing.Size(301, 73);
             this.btnPerfil.TabIndex = 34;
             this.btnPerfil.TabStop = false;
             this.btnPerfil.Text = "Perfil";
@@ -136,14 +136,14 @@
             this.btnSair.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSair.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
             this.btnSair.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.btnSair.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSair.HoverState.FillColor = System.Drawing.Color.Red;
-            this.btnSair.Location = new System.Drawing.Point(75, 770);
+            this.btnSair.Location = new System.Drawing.Point(101, 1000);
             this.btnSair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSair.Name = "btnSair";
             this.btnSair.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
-            this.btnSair.Size = new System.Drawing.Size(152, 55);
+            this.btnSair.Size = new System.Drawing.Size(102, 55);
             this.btnSair.TabIndex = 35;
             this.btnSair.TabStop = false;
             this.btnSair.Text = "Sair";
@@ -161,30 +161,18 @@
             this.btnMeusTreinos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnMeusTreinos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
             this.btnMeusTreinos.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.btnMeusTreinos.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMeusTreinos.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnMeusTreinos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnMeusTreinos.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.btnMeusTreinos.Location = new System.Drawing.Point(3, 188);
+            this.btnMeusTreinos.Location = new System.Drawing.Point(1, 190);
             this.btnMeusTreinos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMeusTreinos.Name = "btnMeusTreinos";
             this.btnMeusTreinos.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
-            this.btnMeusTreinos.Size = new System.Drawing.Size(294, 77);
+            this.btnMeusTreinos.Size = new System.Drawing.Size(301, 73);
             this.btnMeusTreinos.TabIndex = 33;
             this.btnMeusTreinos.TabStop = false;
             this.btnMeusTreinos.Text = "Meus treinos";
             this.btnMeusTreinos.UseTransparentBackground = true;
-            // 
-            // imLogoCliente
-            // 
-            this.imLogoCliente.BackColor = System.Drawing.Color.Transparent;
-            this.imLogoCliente.Image = global::LoginAcademia.Properties.Resources.ChatGPT_Image_14_de_mai__de_2026__17_10_07;
-            this.imLogoCliente.Location = new System.Drawing.Point(84, 11);
-            this.imLogoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.imLogoCliente.Name = "imLogoCliente";
-            this.imLogoCliente.Size = new System.Drawing.Size(124, 99);
-            this.imLogoCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imLogoCliente.TabIndex = 22;
-            this.imLogoCliente.TabStop = false;
             // 
             // guna2Panel1
             // 
@@ -195,9 +183,9 @@
             this.guna2Panel1.Controls.Add(this.lbMeusTreinos);
             this.guna2Panel1.Controls.Add(this.imHalter);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(368, 188);
+            this.guna2Panel1.Location = new System.Drawing.Point(357, 190);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1037, 163);
+            this.guna2Panel1.Size = new System.Drawing.Size(1313, 163);
             this.guna2Panel1.TabIndex = 1;
             // 
             // lbSubtituloCliente
@@ -223,17 +211,6 @@
             this.lbMeusTreinos.Size = new System.Drawing.Size(147, 30);
             this.lbMeusTreinos.TabIndex = 20;
             this.lbMeusTreinos.Text = "Meus treinos";
-            // 
-            // imHalter
-            // 
-            this.imHalter.Image = global::LoginAcademia.Properties.Resources.halter_removebg_preview;
-            this.imHalter.ImageRotate = 0F;
-            this.imHalter.Location = new System.Drawing.Point(-5, 0);
-            this.imHalter.Name = "imHalter";
-            this.imHalter.Size = new System.Drawing.Size(194, 163);
-            this.imHalter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imHalter.TabIndex = 22;
-            this.imHalter.TabStop = false;
             // 
             // pnPrincipal
             // 
@@ -264,9 +241,9 @@
             this.lbData.BackColor = System.Drawing.Color.Transparent;
             this.lbData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbData.ForeColor = System.Drawing.Color.Gray;
-            this.lbData.Location = new System.Drawing.Point(1306, 75);
+            this.lbData.Location = new System.Drawing.Point(1544, 74);
             this.lbData.Name = "lbData";
-            this.lbData.Size = new System.Drawing.Size(183, 35);
+            this.lbData.Size = new System.Drawing.Size(137, 35);
             this.lbData.TabIndex = 8;
             this.lbData.Text = "18 de Maio, 2026";
             // 
@@ -292,20 +269,6 @@
             this.lbDescricaoCliente.TabIndex = 6;
             this.lbDescricaoCliente.Text = "Você ainda não possui treinos cadastrados. ";
             // 
-            // imPrancheta
-            // 
-            this.imPrancheta.BorderRadius = 30;
-            this.imPrancheta.Image = global::LoginAcademia.Properties.Resources.image_removebg_preview;
-            this.imPrancheta.ImageRotate = 0F;
-            this.imPrancheta.Location = new System.Drawing.Point(796, 404);
-            this.imPrancheta.Name = "imPrancheta";
-            this.imPrancheta.ShadowDecoration.BorderRadius = 20;
-            this.imPrancheta.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.imPrancheta.Size = new System.Drawing.Size(184, 135);
-            this.imPrancheta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imPrancheta.TabIndex = 5;
-            this.imPrancheta.TabStop = false;
-            // 
             // lbSubtitulo
             // 
             this.lbSubtitulo.AutoSize = false;
@@ -324,7 +287,7 @@
             this.lbNomeCliente.BackColor = System.Drawing.Color.Transparent;
             this.lbNomeCliente.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNomeCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbNomeCliente.Location = new System.Drawing.Point(418, 47);
+            this.lbNomeCliente.Location = new System.Drawing.Point(406, 47);
             this.lbNomeCliente.Name = "lbNomeCliente";
             this.lbNomeCliente.Size = new System.Drawing.Size(103, 35);
             this.lbNomeCliente.TabIndex = 3;
@@ -342,6 +305,43 @@
             this.lbOla.TabIndex = 2;
             this.lbOla.Text = "Olá, ";
             // 
+            // imPrancheta
+            // 
+            this.imPrancheta.BorderRadius = 30;
+            this.imPrancheta.Image = global::LoginAcademia.Properties.Resources.image_removebg_preview;
+            this.imPrancheta.ImageRotate = 0F;
+            this.imPrancheta.Location = new System.Drawing.Point(796, 404);
+            this.imPrancheta.Name = "imPrancheta";
+            this.imPrancheta.ShadowDecoration.BorderRadius = 20;
+            this.imPrancheta.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.imPrancheta.Size = new System.Drawing.Size(184, 135);
+            this.imPrancheta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imPrancheta.TabIndex = 5;
+            this.imPrancheta.TabStop = false;
+            // 
+            // imLogoCliente
+            // 
+            this.imLogoCliente.BackColor = System.Drawing.Color.Transparent;
+            this.imLogoCliente.Image = global::LoginAcademia.Properties.Resources.ChatGPT_Image_14_de_mai__de_2026__17_10_07;
+            this.imLogoCliente.Location = new System.Drawing.Point(95, 2);
+            this.imLogoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.imLogoCliente.Name = "imLogoCliente";
+            this.imLogoCliente.Size = new System.Drawing.Size(116, 89);
+            this.imLogoCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imLogoCliente.TabIndex = 22;
+            this.imLogoCliente.TabStop = false;
+            // 
+            // imHalter
+            // 
+            this.imHalter.Image = global::LoginAcademia.Properties.Resources.halter_removebg_preview;
+            this.imHalter.ImageRotate = 0F;
+            this.imHalter.Location = new System.Drawing.Point(-5, 0);
+            this.imHalter.Name = "imHalter";
+            this.imHalter.Size = new System.Drawing.Size(194, 163);
+            this.imHalter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imHalter.TabIndex = 22;
+            this.imHalter.TabStop = false;
+            // 
             // IHMCliente
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -357,13 +357,13 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.IHMCliente_Load);
             this.pnLateral.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.imLogoCliente)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imHalter)).EndInit();
             this.pnPrincipal.ResumeLayout(false);
             this.pnPrincipal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imPrancheta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imLogoCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imHalter)).EndInit();
             this.ResumeLayout(false);
 
         }
