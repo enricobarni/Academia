@@ -15,11 +15,6 @@ namespace LoginAcademia
         [STAThread]
         static void Main()
         {
-            // Aponta DataDirectory para a pasta raiz do projeto (onde está BDacademia\)
-            string basePath = AppDomain.CurrentDomain.BaseDirectory;
-            string projectPath = Path.GetFullPath(Path.Combine(basePath, @"..\..\"));
-            AppDomain.CurrentDomain.SetData("DataDirectory", projectPath);
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new IHMLogin());

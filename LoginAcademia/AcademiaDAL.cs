@@ -10,10 +10,10 @@ namespace LoginAcademia
     public class AcademiaDAL
     {
         private static string strConexao =
-    "Data Source=(LocalDB)\\MSSQLLocalDB;" +
-    "AttachDbFilename=|DataDirectory|\\BDacademia\\AcademiaBD.mdf;" +
+    "Server=.\\SQLEXPRESS;" +
+    "Database=AcademiaBD;" +
     "Integrated Security=True;" +
-    "Connect Timeout=30;";
+    "TrustServerCertificate=True;";
 
         private static SqlConnection conn = new SqlConnection(strConexao);
         private static SqlCommand strSQL;
