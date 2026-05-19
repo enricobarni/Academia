@@ -115,6 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AcademiaBLL.cs" />
+    <Compile Include="AcademiaDAL.cs" />
     <Compile Include="Endereco.cs" />
     <Compile Include="Erro.cs" />
     <Compile Include="IHMCadastro.cs">

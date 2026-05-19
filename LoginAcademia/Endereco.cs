@@ -14,6 +14,8 @@ namespace LoginAcademia
         private string bairro;
         private string cidade;
         private string estado;
+        private string numero;
+        private string complemento;
 
         public void setCep(string _cep) { cep = _cep; }
         public string getCep() { return cep; }
@@ -30,6 +32,11 @@ namespace LoginAcademia
         public void setEstado(string _estado) { estado = _estado; }
         public string getEstado() { return estado; }
 
+        public void setNumero(string _numero) { numero = _numero; }
+        public string getNumero() { return numero; }
+
+        public void setComplemento(string _complemento) { complemento = _complemento; }
+        public string getComplemento() { return complemento; }
 
         [JsonPropertyName("logradouro")]
         public string JsonRua

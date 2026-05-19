@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -44,7 +45,7 @@ namespace LoginAcademia
             academia.setUsuario(txtUsuario.Text);
             academia.setEmail(txtEmail.Text);
             academia.setSenha(txtSenha.Text);
-            academia.setTelefone(txtTelefone.Text);
+            academia.setTelefone(Regex.Replace(txtTelefone.Text, @"\D", ""));
             AcademiaBLL.validacaonome(txtNome.Text);
             if (Erro.getErro())
             {
@@ -112,9 +113,29 @@ namespace LoginAcademia
             if (possuiErro)
                 return;
 
+            endereco.setCep(txtCep.Text.Replace("-", ""));
+            endereco.setRua(txtRua.Text);
+            endereco.setBairro(txtBairro.Text);
+            endereco.setCidade(txtCidade.Text);
+            endereco.setEstado(txtEstado.Text);
+            endereco.setNumero(txtNumero.Text);
+            endereco.setComplemento(txtComplemento.Text);
+
+            AcademiaDAL.insereCadastro(academia, endereco);
+
+            if (Erro.getErro())
+            {
+                MessageBox.Show(Erro.getMsg());
+                return;
+            }
+
             MessageBox.Show("Cadastro realizado com sucesso!");
+            IHMLogin formLogin = new IHMLogin();
+            formLogin.Show();
+            this.Hide();
 
         }
+
         private void txtTelefone_TextChanged(object sender, EventArgs e)
         {
             //Formata o telefone no Textbox do telefone

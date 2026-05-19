@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace LoginAcademia
 {
-    class Login_Cadastro
+    public class Login_Cadastro
     {
+        private int cdUsuario;
+        public void setCdUsuario(int _cdUsuario) { cdUsuario = _cdUsuario; }
+        public int getCdUsuario() { return cdUsuario; }
+
         private string nome;
         public void setNome(string _nome) { nome = _nome; }
         public string getNome() { return nome; }
@@ -27,5 +31,9 @@ namespace LoginAcademia
         private string telefone;
         public void setTelefone(string _telefone) { telefone = _telefone; }
         public string getTelefone() { return telefone; }
+
+        private bool icAdmin;
+        public void setIcAdmin(bool _icAdmin) { icAdmin = _icAdmin; }
+        public bool getIcAdmin() { return icAdmin; }
     }
 }

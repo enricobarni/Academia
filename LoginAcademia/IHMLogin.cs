@@ -32,18 +32,16 @@ namespace LoginAcademia
         {
             lblErroUsuario.Text = "";
             lblErroSenha.Text = "";
-
             bool possuiErro = false;
 
-            academia.setUsuario(txtUsuario.Text);
-            academia.setSenha(txtSenha.Text);
-            AcademiaBLL.validacaousuario(txtUsuario.Text);
+            AcademiaBLL.validacaologin(txtUsuario.Text);
             if (Erro.getErro())
             {
                 lblErroUsuario.Text = Erro.getMsg();
                 lblErroUsuario.Visible = true;
                 possuiErro = true;
             }
+
             AcademiaBLL.validacaosenha(txtSenha.Text);
             if (Erro.getErro())
             {
@@ -52,9 +50,39 @@ namespace LoginAcademia
                 possuiErro = true;
             }
 
-            // Se houver qualquer erro, não continua
-            if (possuiErro)
+            if (possuiErro) return;
+
+            academia.setUsuario(txtUsuario.Text);
+
+            AcademiaDAL.consultaLogin(academia);
+
+            if (Erro.getErro())
+            {
+                lblErroUsuario.Text = Erro.getMsg();
+                lblErroUsuario.Visible = true;
                 return;
+            }
+
+            // Verifica a senha com BCrypt
+            if (!BCrypt.Net.BCrypt.Verify(txtSenha.Text, academia.getSenha()))
+            {
+                lblErroSenha.Text = "Senha incorreta!";
+                lblErroSenha.Visible = true;
+                return;
+            }
+
+            // Redireciona conforme perfil
+            if (academia.getIcAdmin())
+            {
+                // new frmMenuAdmin(academia).Show(); // quando tiver a tela admin
+                MessageBox.Show("Bem-vindo, Admin " + academia.getNome() + "!");
+            }
+            else
+            {
+                IHMCliente formCliente = new IHMCliente(academia);
+                formCliente.Show();
+                this.Hide();
+            }
         }
 
         private void btnCriarConta_Click(object sender, EventArgs e)

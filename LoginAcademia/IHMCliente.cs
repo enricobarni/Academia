@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace LoginAcademia
 {
-    public partial class IHMCliente: Form
+    public partial class IHMCliente : Form
     {
-        public IHMCliente()
+        private Login_Cadastro usuarioLogado;
+
+        public IHMCliente(Login_Cadastro lc)
         {
             InitializeComponent();
+            usuarioLogado = lc;
+        }
+
+        private void IHMCliente_Load(object sender, EventArgs e)
+        {
+            // Exemplo: mostrar nome na tela
+            // lblNome.Text = "Bem-vindo, " + usuarioLogado.getNome();
         }
     }
 }

@@ -206,7 +206,7 @@
             this.lbSubtituloCliente.ForeColor = System.Drawing.Color.Gray;
             this.lbSubtituloCliente.Location = new System.Drawing.Point(188, 83);
             this.lbSubtituloCliente.Name = "lbSubtituloCliente";
-            this.lbSubtituloCliente.Size = new System.Drawing.Size(327, 25);
+            this.lbSubtituloCliente.Size = new System.Drawing.Size(267, 20);
             this.lbSubtituloCliente.TabIndex = 21;
             this.lbSubtituloCliente.Text = "Aqui estão seus treinos e exercícicos.";
             // 
@@ -218,7 +218,7 @@
             this.lbMeusTreinos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbMeusTreinos.Location = new System.Drawing.Point(186, 45);
             this.lbMeusTreinos.Name = "lbMeusTreinos";
-            this.lbMeusTreinos.Size = new System.Drawing.Size(187, 38);
+            this.lbMeusTreinos.Size = new System.Drawing.Size(147, 30);
             this.lbMeusTreinos.TabIndex = 20;
             this.lbMeusTreinos.Text = "Meus treinos";
             // 
@@ -275,7 +275,7 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Gray;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(714, 614);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(455, 27);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(364, 21);
             this.guna2HtmlLabel1.TabIndex = 7;
             this.guna2HtmlLabel1.Text = "Fale com seu treinador para criar seu primeiro treino!";
             // 
@@ -286,7 +286,7 @@
             this.lbDescricaoCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbDescricaoCliente.Location = new System.Drawing.Point(690, 561);
             this.lbDescricaoCliente.Name = "lbDescricaoCliente";
-            this.lbDescricaoCliente.Size = new System.Drawing.Size(504, 37);
+            this.lbDescricaoCliente.Size = new System.Drawing.Size(410, 30);
             this.lbDescricaoCliente.TabIndex = 6;
             this.lbDescricaoCliente.Text = "Você ainda não possui treinos cadastrados. ";
             // 

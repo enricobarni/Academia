@@ -313,5 +313,15 @@ namespace LoginAcademia
                 return;
             }
         }
+
+        public static void validacaologin(string txtLogin)
+        {
+            Erro.setErro(false);
+            if (string.IsNullOrWhiteSpace(txtLogin))
+            {
+                Erro.setMsg("Informe seu usuário ou email!");
+                return;
+            }
+        }
     }
 }
