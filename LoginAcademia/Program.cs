@@ -17,7 +17,7 @@ namespace LoginAcademia
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new IHMAdm1());
+            Application.Run(new IHMAdm2());
         }
     }
 }
