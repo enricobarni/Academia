@@ -64,10 +64,10 @@
             this.pnLogin.Controls.Add(this.lbSubtitulo);
             this.pnLogin.Controls.Add(this.lbBemVindo);
             this.pnLogin.Controls.Add(this.imLogo);
-            this.pnLogin.Location = new System.Drawing.Point(533, 33);
-            this.pnLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.pnLogin.Location = new System.Drawing.Point(711, 41);
+            this.pnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnLogin.Name = "pnLogin";
-            this.pnLogin.Size = new System.Drawing.Size(360, 488);
+            this.pnLogin.Size = new System.Drawing.Size(480, 601);
             this.pnLogin.TabIndex = 5;
             // 
             // lblErroSenha
@@ -76,10 +76,9 @@
             this.lblErroSenha.BackColor = System.Drawing.Color.Transparent;
             this.lblErroSenha.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErroSenha.ForeColor = System.Drawing.Color.Red;
-            this.lblErroSenha.Location = new System.Drawing.Point(56, 283);
-            this.lblErroSenha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblErroSenha.Location = new System.Drawing.Point(75, 348);
             this.lblErroSenha.Name = "lblErroSenha";
-            this.lblErroSenha.Size = new System.Drawing.Size(70, 12);
+            this.lblErroSenha.Size = new System.Drawing.Size(91, 15);
             this.lblErroSenha.TabIndex = 52;
             this.lblErroSenha.Text = "Senha Inválida!";
             // 
@@ -89,10 +88,9 @@
             this.lblErroUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblErroUsuario.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErroUsuario.ForeColor = System.Drawing.Color.Red;
-            this.lblErroUsuario.Location = new System.Drawing.Point(56, 211);
-            this.lblErroUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblErroUsuario.Location = new System.Drawing.Point(75, 260);
             this.lblErroUsuario.Name = "lblErroUsuario";
-            this.lblErroUsuario.Size = new System.Drawing.Size(80, 12);
+            this.lblErroUsuario.Size = new System.Drawing.Size(100, 15);
             this.lblErroUsuario.TabIndex = 49;
             this.lblErroUsuario.Text = "Usuario Inválido!";
             // 
@@ -103,10 +101,10 @@
             this.lbOuLogin.Enabled = false;
             this.lbOuLogin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOuLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbOuLogin.Location = new System.Drawing.Point(169, 405);
-            this.lbOuLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.lbOuLogin.Location = new System.Drawing.Point(225, 498);
+            this.lbOuLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbOuLogin.Name = "lbOuLogin";
-            this.lbOuLogin.Size = new System.Drawing.Size(26, 20);
+            this.lbOuLogin.Size = new System.Drawing.Size(35, 25);
             this.lbOuLogin.TabIndex = 26;
             this.lbOuLogin.TabStop = false;
             this.lbOuLogin.Text = "ou";
@@ -126,10 +124,10 @@
             this.btnCriarConta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCriarConta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.btnCriarConta.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCriarConta.Location = new System.Drawing.Point(30, 426);
-            this.btnCriarConta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCriarConta.Location = new System.Drawing.Point(40, 524);
+            this.btnCriarConta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCriarConta.Name = "btnCriarConta";
-            this.btnCriarConta.Size = new System.Drawing.Size(300, 37);
+            this.btnCriarConta.Size = new System.Drawing.Size(400, 46);
             this.btnCriarConta.TabIndex = 6;
             this.btnCriarConta.TabStop = false;
             this.btnCriarConta.Text = "CRIAR CONTA";
@@ -151,12 +149,12 @@
             this.btnEntrar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnEntrar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.btnEntrar.Location = new System.Drawing.Point(31, 368);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEntrar.Location = new System.Drawing.Point(41, 453);
+            this.btnEntrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
             this.btnEntrar.ShadowDecoration.Enabled = true;
-            this.btnEntrar.Size = new System.Drawing.Size(300, 37);
+            this.btnEntrar.Size = new System.Drawing.Size(400, 46);
             this.btnEntrar.TabIndex = 5;
             this.btnEntrar.TabStop = false;
             this.btnEntrar.Text = "ENTRAR";
@@ -184,14 +182,15 @@
             this.txtSenha.IconRight = global::LoginAcademia.Properties.Resources.iconesSenha2;
             this.txtSenha.IconRightOffset = new System.Drawing.Point(5, 0);
             this.txtSenha.IconRightSize = new System.Drawing.Size(20, 15);
-            this.txtSenha.Location = new System.Drawing.Point(30, 253);
-            this.txtSenha.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtSenha.Location = new System.Drawing.Point(40, 311);
+            this.txtSenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PlaceholderText = "Digite sua senha";
             this.txtSenha.SelectedText = "";
-            this.txtSenha.Size = new System.Drawing.Size(300, 37);
+            this.txtSenha.Size = new System.Drawing.Size(400, 46);
             this.txtSenha.TabIndex = 1;
             this.txtSenha.UseSystemPasswordChar = true;
+            this.txtSenha.IconRightClick += new System.EventHandler(this.txtSenha_IconRightClick);
             // 
             // txtUsuario
             // 
@@ -211,12 +210,12 @@
             this.txtUsuario.IconLeft = global::LoginAcademia.Properties.Resources.iconesUsuario2;
             this.txtUsuario.IconLeftOffset = new System.Drawing.Point(5, 0);
             this.txtUsuario.IconLeftSize = new System.Drawing.Size(15, 15);
-            this.txtUsuario.Location = new System.Drawing.Point(30, 181);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtUsuario.Location = new System.Drawing.Point(40, 223);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PlaceholderText = "Digite seu nome";
             this.txtUsuario.SelectedText = "";
-            this.txtUsuario.Size = new System.Drawing.Size(300, 37);
+            this.txtUsuario.Size = new System.Drawing.Size(400, 46);
             this.txtUsuario.TabIndex = 0;
             // 
             // lbSenhaCadastro
@@ -224,10 +223,9 @@
             this.lbSenhaCadastro.AutoSize = true;
             this.lbSenhaCadastro.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSenhaCadastro.ForeColor = System.Drawing.Color.Gray;
-            this.lbSenhaCadastro.Location = new System.Drawing.Point(28, 229);
-            this.lbSenhaCadastro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbSenhaCadastro.Location = new System.Drawing.Point(37, 282);
             this.lbSenhaCadastro.Name = "lbSenhaCadastro";
-            this.lbSenhaCadastro.Size = new System.Drawing.Size(59, 20);
+            this.lbSenhaCadastro.Size = new System.Drawing.Size(73, 25);
             this.lbSenhaCadastro.TabIndex = 20;
             this.lbSenhaCadastro.Text = "SENHA";
             // 
@@ -237,10 +235,9 @@
             this.lbUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lbUsuario.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUsuario.ForeColor = System.Drawing.Color.Gray;
-            this.lbUsuario.Location = new System.Drawing.Point(26, 158);
-            this.lbUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbUsuario.Location = new System.Drawing.Point(35, 194);
             this.lbUsuario.Name = "lbUsuario";
-            this.lbUsuario.Size = new System.Drawing.Size(76, 20);
+            this.lbUsuario.Size = new System.Drawing.Size(93, 25);
             this.lbUsuario.TabIndex = 19;
             this.lbUsuario.Text = "USUÁRIO";
             // 
@@ -249,10 +246,9 @@
             this.lbSubtitulo.AutoSize = true;
             this.lbSubtitulo.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSubtitulo.ForeColor = System.Drawing.Color.Gray;
-            this.lbSubtitulo.Location = new System.Drawing.Point(77, 122);
-            this.lbSubtitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbSubtitulo.Location = new System.Drawing.Point(103, 150);
             this.lbSubtitulo.Name = "lbSubtitulo";
-            this.lbSubtitulo.Size = new System.Drawing.Size(213, 13);
+            this.lbSubtitulo.Size = new System.Drawing.Size(253, 17);
             this.lbSubtitulo.TabIndex = 18;
             this.lbSubtitulo.Text = "Faça login para continuar sua evolução.";
             // 
@@ -261,10 +257,9 @@
             this.lbBemVindo.AutoSize = true;
             this.lbBemVindo.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBemVindo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbBemVindo.Location = new System.Drawing.Point(89, 81);
-            this.lbBemVindo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbBemVindo.Location = new System.Drawing.Point(119, 100);
             this.lbBemVindo.Name = "lbBemVindo";
-            this.lbBemVindo.Size = new System.Drawing.Size(193, 41);
+            this.lbBemVindo.Size = new System.Drawing.Size(237, 50);
             this.lbBemVindo.TabIndex = 17;
             this.lbBemVindo.Text = "BEM-VINDO";
             // 
@@ -272,25 +267,25 @@
             // 
             this.imLogo.BackColor = System.Drawing.Color.Transparent;
             this.imLogo.Image = global::LoginAcademia.Properties.Resources.ChatGPT_Image_14_de_mai__de_2026__17_10_07;
-            this.imLogo.Location = new System.Drawing.Point(126, 11);
-            this.imLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.imLogo.Location = new System.Drawing.Point(168, 14);
+            this.imLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.imLogo.Name = "imLogo";
-            this.imLogo.Size = new System.Drawing.Size(100, 81);
+            this.imLogo.Size = new System.Drawing.Size(133, 100);
             this.imLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imLogo.TabIndex = 21;
             this.imLogo.TabStop = false;
             // 
             // IHMLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LoginAcademia.Properties.Resources.ChatGPT_Image_13_de_mai__de_2026__18_06_17;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1455, 894);
+            this.ClientSize = new System.Drawing.Size(1940, 1100);
             this.Controls.Add(this.pnLogin);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "IHMLogin";
             this.Text = "IHMLogin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
