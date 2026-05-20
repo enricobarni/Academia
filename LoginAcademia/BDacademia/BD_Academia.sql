@@ -11,10 +11,6 @@ BEGIN
 END
 GO
 
--- Garante que a pasta de destino exista antes de criar o banco.
--- Execute este bloco xp_cmdshell UMA vez no SSMS como sysadmin,
--- ou crie a pasta manualmente antes de rodar o script.
--- EXEC xp_cmdshell 'mkdir "C:\Users\enric\source\repos\Academia\LoginAcademia\BDacademia"';
 
 CREATE DATABASE AcademiaBD
 GO
@@ -332,6 +328,14 @@ INSERT INTO Endereco (
     'SP'
 );
 GO
+
+-- APAGAR TODOS OS USUARIOS DE TESTE (descomente para usar)
+-- ============================================================
+--USE AcademiaBD;
+--DELETE FROM Endereco;
+--DELETE FROM Usuario WHERE ic_admin = 0;
+--DBCC CHECKIDENT ('Usuario', RESEED, 1);
+-- ============================================================
 
 
 -- ============================================================
