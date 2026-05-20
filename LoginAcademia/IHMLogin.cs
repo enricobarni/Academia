@@ -98,5 +98,12 @@ namespace LoginAcademia
             // Opcional: esconder o formulário atual
             this.Hide();
         }
+
+        private void txtSenha_IconRightClick(object sender, EventArgs e)
+        {
+            //Funcionalidade pro olho esconder e revelar a senha
+            txtSenha.UseSystemPasswordChar =
+            !txtSenha.UseSystemPasswordChar;
+        }
     }
 }

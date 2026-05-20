@@ -196,5 +196,19 @@ namespace LoginAcademia
                 cepBuscado = false; // marca que o usuario não buscou o cep
             }
         }
+
+        private void txtSenha_IconRightClick(object sender, EventArgs e)
+        {
+            //Funcionalidade pro olho esconder e revelar a senha
+            txtSenha.UseSystemPasswordChar =
+            !txtSenha.UseSystemPasswordChar;
+        }
+
+        private void txtConfirmarsenha_IconRightClick(object sender, EventArgs e)
+        {
+            //Funcionalidade pro olho esconder e revelar a senha
+            txtConfirmarsenha.UseSystemPasswordChar =
+            !txtConfirmarsenha.UseSystemPasswordChar;
+        }
     }
 }
