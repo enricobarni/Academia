@@ -16,5 +16,13 @@ namespace LoginAcademia
         {
             InitializeComponent();
         }
+
+        private void IHMAdm1_Load(object sender, EventArgs e)
+        {
+            guna2DataGridView1.ColumnCount = 3;
+            guna2DataGridView1.Rows.Add("1", "Matheus Ferreira", "matheus@email.com");
+            guna2DataGridView1.Rows.Add("2", "Lucas Almeida", "lucas@email.com");
+            guna2DataGridView1.Rows.Add("3", "Bruno Rodrigues", "bruno@email.com");
+        }
     }
 }
