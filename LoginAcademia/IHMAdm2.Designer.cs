@@ -40,38 +40,41 @@
             this.pnPrincipal = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnSalvarTreino = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvExercicios = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.USUARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EMAIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ACOES = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EXCLUIR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGrupoMuscular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colExercicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSeries = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRepeticoes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescanso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colObservacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colExcluir = new System.Windows.Forms.DataGridViewButtonColumn();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtNomeTreino = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblNomeTreino = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2NumericUpDown4 = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.btnAdicionar = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.numOrdem = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.btnAdicionarExercicio = new Guna.UI2.WinForms.Guna2Button();
+            this.txtObservacao = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2NumericUpDown3 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.numDescanso = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2NumericUpDown2 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.numRepeticoes = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.numSeries = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.cmbExercicio = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbGrupoMuscular = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbDivisao = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbMeusTreinos = new System.Windows.Forms.Label();
+            this.lblNomeCliente = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbSubtitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbOla = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -85,12 +88,12 @@
             this.pnPrincipal.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExercicios)).BeginInit();
             this.guna2Panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOrdem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDescanso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numRepeticoes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSeries)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnLateral.SuspendLayout();
@@ -134,13 +137,41 @@
             this.guna2Panel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.guna2Panel4.BorderRadius = 20;
             this.guna2Panel4.BorderThickness = 2;
+            this.guna2Panel4.Controls.Add(this.btnSalvarTreino);
             this.guna2Panel4.Controls.Add(this.guna2HtmlLabel11);
-            this.guna2Panel4.Controls.Add(this.guna2DataGridView1);
+            this.guna2Panel4.Controls.Add(this.dgvExercicios);
             this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
             this.guna2Panel4.Location = new System.Drawing.Point(599, 28);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(735, 694);
             this.guna2Panel4.TabIndex = 24;
+            // 
+            // btnSalvarTreino
+            // 
+            this.btnSalvarTreino.Animated = true;
+            this.btnSalvarTreino.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalvarTreino.BorderRadius = 5;
+            this.btnSalvarTreino.BorderThickness = 2;
+            this.btnSalvarTreino.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvarTreino.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSalvarTreino.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSalvarTreino.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSalvarTreino.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSalvarTreino.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.btnSalvarTreino.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnSalvarTreino.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvarTreino.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSalvarTreino.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.btnSalvarTreino.Location = new System.Drawing.Point(217, 600);
+            this.btnSalvarTreino.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalvarTreino.Name = "btnSalvarTreino";
+            this.btnSalvarTreino.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
+            this.btnSalvarTreino.ShadowDecoration.Enabled = true;
+            this.btnSalvarTreino.Size = new System.Drawing.Size(300, 37);
+            this.btnSalvarTreino.TabIndex = 39;
+            this.btnSalvarTreino.TabStop = false;
+            this.btnSalvarTreino.Text = "Salvar Treino";
+            this.btnSalvarTreino.Click += new System.EventHandler(this.btnSalvarTreino_Click);
             // 
             // guna2HtmlLabel11
             // 
@@ -154,19 +185,19 @@
             this.guna2HtmlLabel11.TabIndex = 24;
             this.guna2HtmlLabel11.Text = "Exercícios Adicionados";
             // 
-            // guna2DataGridView1
+            // dgvExercicios
             // 
-            this.guna2DataGridView1.AllowUserToAddRows = false;
-            this.guna2DataGridView1.AllowUserToDeleteRows = false;
-            this.guna2DataGridView1.AllowUserToResizeColumns = false;
-            this.guna2DataGridView1.AllowUserToResizeRows = false;
+            this.dgvExercicios.AllowUserToAddRows = false;
+            this.dgvExercicios.AllowUserToDeleteRows = false;
+            this.dgvExercicios.AllowUserToResizeColumns = false;
+            this.dgvExercicios.AllowUserToResizeRows = false;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            this.dgvExercicios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvExercicios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
             dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -174,19 +205,19 @@
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.guna2DataGridView1.ColumnHeadersHeight = 45;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
+            this.dgvExercicios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvExercicios.ColumnHeadersHeight = 45;
+            this.dgvExercicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvExercicios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colId,
             this.Nome,
-            this.USUARIO,
-            this.EMAIL,
-            this.Telefone,
-            this.Cidade,
-            this.Estado,
-            this.ACOES,
-            this.EXCLUIR});
+            this.colGrupoMuscular,
+            this.colExercicio,
+            this.colSeries,
+            this.colRepeticoes,
+            this.colDescanso,
+            this.colObservacao,
+            this.colExcluir});
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
             dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -194,12 +225,12 @@
             dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
             dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(23, 43);
-            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvExercicios.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dgvExercicios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvExercicios.Location = new System.Drawing.Point(23, 43);
+            this.dgvExercicios.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvExercicios.Name = "dgvExercicios";
+            this.dgvExercicios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
             dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -207,132 +238,139 @@
             dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
             dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.RowHeadersWidth = 51;
-            this.guna2DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.guna2DataGridView1.RowTemplate.Height = 30;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(710, 627);
-            this.guna2DataGridView1.TabIndex = 31;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(11)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 45;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 30;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(11)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvExercicios.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.dgvExercicios.RowHeadersVisible = false;
+            this.dgvExercicios.RowHeadersWidth = 51;
+            this.dgvExercicios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvExercicios.RowTemplate.Height = 30;
+            this.dgvExercicios.Size = new System.Drawing.Size(710, 505);
+            this.dgvExercicios.TabIndex = 31;
+            this.dgvExercicios.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
+            this.dgvExercicios.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvExercicios.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvExercicios.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(11)))), ((int)(((byte)(255)))));
+            this.dgvExercicios.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvExercicios.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            this.dgvExercicios.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvExercicios.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.dgvExercicios.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvExercicios.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvExercicios.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvExercicios.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvExercicios.ThemeStyle.HeaderStyle.Height = 45;
+            this.dgvExercicios.ThemeStyle.ReadOnly = false;
+            this.dgvExercicios.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
+            this.dgvExercicios.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvExercicios.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvExercicios.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvExercicios.ThemeStyle.RowsStyle.Height = 30;
+            this.dgvExercicios.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(11)))), ((int)(((byte)(255)))));
+            this.dgvExercicios.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvExercicios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExercicios_CellClick);
             // 
-            // ID
+            // colId
             // 
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID.DefaultCellStyle = dataGridViewCellStyle11;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ID.Visible = false;
+            this.colId.DefaultCellStyle = dataGridViewCellStyle11;
+            this.colId.HeaderText = "ID";
+            this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
+            this.colId.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colId.Visible = false;
             // 
             // Nome
             // 
+            this.Nome.DataPropertyName = "colOrdem";
             this.Nome.HeaderText = "ORDEM";
             this.Nome.Name = "Nome";
             this.Nome.ReadOnly = true;
             this.Nome.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // USUARIO
+            // colGrupoMuscular
             // 
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.USUARIO.DefaultCellStyle = dataGridViewCellStyle12;
-            this.USUARIO.HeaderText = "GRUPO M.";
-            this.USUARIO.Name = "USUARIO";
-            this.USUARIO.ReadOnly = true;
-            this.USUARIO.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colGrupoMuscular.DefaultCellStyle = dataGridViewCellStyle12;
+            this.colGrupoMuscular.HeaderText = "GRUPO M.";
+            this.colGrupoMuscular.Name = "colGrupoMuscular";
+            this.colGrupoMuscular.ReadOnly = true;
+            this.colGrupoMuscular.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // EMAIL
+            // colExercicio
             // 
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EMAIL.DefaultCellStyle = dataGridViewCellStyle13;
-            this.EMAIL.HeaderText = "EXERCÍCIO";
-            this.EMAIL.Name = "EMAIL";
-            this.EMAIL.ReadOnly = true;
-            this.EMAIL.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colExercicio.DefaultCellStyle = dataGridViewCellStyle13;
+            this.colExercicio.HeaderText = "EXERCÍCIO";
+            this.colExercicio.Name = "colExercicio";
+            this.colExercicio.ReadOnly = true;
+            this.colExercicio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // Telefone
+            // colSeries
             // 
-            this.Telefone.HeaderText = "SÉRIES";
-            this.Telefone.Name = "Telefone";
-            this.Telefone.ReadOnly = true;
-            this.Telefone.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colSeries.HeaderText = "SÉRIES";
+            this.colSeries.Name = "colSeries";
+            this.colSeries.ReadOnly = true;
+            this.colSeries.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // Cidade
+            // colRepeticoes
             // 
-            this.Cidade.HeaderText = "REPETIÇÕES";
-            this.Cidade.Name = "Cidade";
-            this.Cidade.ReadOnly = true;
-            this.Cidade.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colRepeticoes.HeaderText = "REPETIÇÕES";
+            this.colRepeticoes.Name = "colRepeticoes";
+            this.colRepeticoes.ReadOnly = true;
+            this.colRepeticoes.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // Estado
+            // colDescanso
             // 
-            this.Estado.HeaderText = "DESCANSO";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colDescanso.HeaderText = "DESCANSO";
+            this.colDescanso.Name = "colDescanso";
+            this.colDescanso.ReadOnly = true;
+            this.colDescanso.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // ACOES
+            // colObservacao
             // 
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ACOES.DefaultCellStyle = dataGridViewCellStyle14;
-            this.ACOES.HeaderText = "OBSERVAÇÃO";
-            this.ACOES.Name = "ACOES";
-            this.ACOES.ReadOnly = true;
-            this.ACOES.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colObservacao.DefaultCellStyle = dataGridViewCellStyle14;
+            this.colObservacao.HeaderText = "OBSERVAÇÃO";
+            this.colObservacao.Name = "colObservacao";
+            this.colObservacao.ReadOnly = true;
+            this.colObservacao.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // EXCLUIR
+            // colExcluir
             // 
-            this.EXCLUIR.HeaderText = "EXCLUIR";
-            this.EXCLUIR.Name = "EXCLUIR";
-            this.EXCLUIR.ReadOnly = true;
-            this.EXCLUIR.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colExcluir.HeaderText = "EXCLUIR";
+            this.colExcluir.Name = "colExcluir";
+            this.colExcluir.ReadOnly = true;
+            this.colExcluir.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colExcluir.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.colExcluir.Text = "EXCLUIR";
+            this.colExcluir.UseColumnTextForButtonValue = true;
             // 
             // guna2Panel3
             // 
             this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.guna2Panel3.BorderRadius = 20;
             this.guna2Panel3.BorderThickness = 2;
+            this.guna2Panel3.Controls.Add(this.txtNomeTreino);
+            this.guna2Panel3.Controls.Add(this.lblNomeTreino);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel2);
-            this.guna2Panel3.Controls.Add(this.guna2NumericUpDown4);
-            this.guna2Panel3.Controls.Add(this.btnAdicionar);
-            this.guna2Panel3.Controls.Add(this.guna2TextBox1);
+            this.guna2Panel3.Controls.Add(this.numOrdem);
+            this.guna2Panel3.Controls.Add(this.btnAdicionarExercicio);
+            this.guna2Panel3.Controls.Add(this.txtObservacao);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel9);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel8);
-            this.guna2Panel3.Controls.Add(this.guna2NumericUpDown3);
+            this.guna2Panel3.Controls.Add(this.numDescanso);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel7);
-            this.guna2Panel3.Controls.Add(this.guna2NumericUpDown2);
+            this.guna2Panel3.Controls.Add(this.numRepeticoes);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel6);
-            this.guna2Panel3.Controls.Add(this.guna2NumericUpDown1);
-            this.guna2Panel3.Controls.Add(this.guna2ComboBox3);
+            this.guna2Panel3.Controls.Add(this.numSeries);
+            this.guna2Panel3.Controls.Add(this.cmbExercicio);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel5);
-            this.guna2Panel3.Controls.Add(this.guna2ComboBox2);
+            this.guna2Panel3.Controls.Add(this.cmbGrupoMuscular);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel4);
-            this.guna2Panel3.Controls.Add(this.guna2ComboBox1);
+            this.guna2Panel3.Controls.Add(this.cmbDivisao);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel3);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
@@ -341,85 +379,124 @@
             this.guna2Panel3.Size = new System.Drawing.Size(542, 694);
             this.guna2Panel3.TabIndex = 23;
             // 
+            // txtNomeTreino
+            // 
+            this.txtNomeTreino.BorderColor = System.Drawing.Color.Gray;
+            this.txtNomeTreino.BorderRadius = 5;
+            this.txtNomeTreino.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNomeTreino.DefaultText = "";
+            this.txtNomeTreino.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNomeTreino.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNomeTreino.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNomeTreino.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNomeTreino.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            this.txtNomeTreino.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.txtNomeTreino.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNomeTreino.ForeColor = System.Drawing.Color.Gray;
+            this.txtNomeTreino.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.txtNomeTreino.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtNomeTreino.IconLeftSize = new System.Drawing.Size(15, 15);
+            this.txtNomeTreino.Location = new System.Drawing.Point(19, 94);
+            this.txtNomeTreino.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtNomeTreino.Multiline = true;
+            this.txtNomeTreino.Name = "txtNomeTreino";
+            this.txtNomeTreino.PlaceholderText = "";
+            this.txtNomeTreino.SelectedText = "";
+            this.txtNomeTreino.Size = new System.Drawing.Size(501, 36);
+            this.txtNomeTreino.TabIndex = 42;
+            // 
+            // lblNomeTreino
+            // 
+            this.lblNomeTreino.AutoSize = false;
+            this.lblNomeTreino.BackColor = System.Drawing.Color.Transparent;
+            this.lblNomeTreino.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblNomeTreino.ForeColor = System.Drawing.Color.Gray;
+            this.lblNomeTreino.Location = new System.Drawing.Point(20, 68);
+            this.lblNomeTreino.Name = "lblNomeTreino";
+            this.lblNomeTreino.Size = new System.Drawing.Size(105, 20);
+            this.lblNomeTreino.TabIndex = 41;
+            this.lblNomeTreino.Text = "Nome do Treino";
+            // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(425, 264);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(424, 341);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(99, 20);
             this.guna2HtmlLabel2.TabIndex = 40;
             this.guna2HtmlLabel2.Text = "Ordem";
             // 
-            // guna2NumericUpDown4
+            // numOrdem
             // 
-            this.guna2NumericUpDown4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown4.BorderColor = System.Drawing.Color.Gray;
-            this.guna2NumericUpDown4.BorderRadius = 5;
-            this.guna2NumericUpDown4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            this.guna2NumericUpDown4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.guna2NumericUpDown4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown4.ForeColor = System.Drawing.Color.Gray;
-            this.guna2NumericUpDown4.Location = new System.Drawing.Point(423, 286);
-            this.guna2NumericUpDown4.Name = "guna2NumericUpDown4";
-            this.guna2NumericUpDown4.Size = new System.Drawing.Size(98, 36);
-            this.guna2NumericUpDown4.TabIndex = 39;
-            this.guna2NumericUpDown4.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.numOrdem.BackColor = System.Drawing.Color.Transparent;
+            this.numOrdem.BorderColor = System.Drawing.Color.Gray;
+            this.numOrdem.BorderRadius = 5;
+            this.numOrdem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.numOrdem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            this.numOrdem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.numOrdem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.numOrdem.ForeColor = System.Drawing.Color.Gray;
+            this.numOrdem.Location = new System.Drawing.Point(422, 363);
+            this.numOrdem.Name = "numOrdem";
+            this.numOrdem.Size = new System.Drawing.Size(98, 36);
+            this.numOrdem.TabIndex = 39;
+            this.numOrdem.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             // 
-            // btnAdicionar
+            // btnAdicionarExercicio
             // 
-            this.btnAdicionar.Animated = true;
-            this.btnAdicionar.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdicionar.BorderRadius = 5;
-            this.btnAdicionar.BorderThickness = 2;
-            this.btnAdicionar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdicionar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdicionar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdicionar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdicionar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdicionar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.btnAdicionar.FocusedColor = System.Drawing.Color.Transparent;
-            this.btnAdicionar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAdicionar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.btnAdicionar.Location = new System.Drawing.Point(121, 600);
-            this.btnAdicionar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
-            this.btnAdicionar.ShadowDecoration.Enabled = true;
-            this.btnAdicionar.Size = new System.Drawing.Size(300, 37);
-            this.btnAdicionar.TabIndex = 38;
-            this.btnAdicionar.TabStop = false;
-            this.btnAdicionar.Text = "Adicionar Exercício";
+            this.btnAdicionarExercicio.Animated = true;
+            this.btnAdicionarExercicio.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdicionarExercicio.BorderRadius = 5;
+            this.btnAdicionarExercicio.BorderThickness = 2;
+            this.btnAdicionarExercicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdicionarExercicio.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdicionarExercicio.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdicionarExercicio.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdicionarExercicio.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdicionarExercicio.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.btnAdicionarExercicio.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnAdicionarExercicio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarExercicio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAdicionarExercicio.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.btnAdicionarExercicio.Location = new System.Drawing.Point(121, 600);
+            this.btnAdicionarExercicio.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdicionarExercicio.Name = "btnAdicionarExercicio";
+            this.btnAdicionarExercicio.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
+            this.btnAdicionarExercicio.ShadowDecoration.Enabled = true;
+            this.btnAdicionarExercicio.Size = new System.Drawing.Size(300, 37);
+            this.btnAdicionarExercicio.TabIndex = 38;
+            this.btnAdicionarExercicio.TabStop = false;
+            this.btnAdicionarExercicio.Text = "Adicionar Exercício";
+            this.btnAdicionarExercicio.Click += new System.EventHandler(this.btnAdicionarExercicio_Click);
             // 
-            // guna2TextBox1
+            // txtObservacao
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.BorderRadius = 5;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(15, 15);
-            this.guna2TextBox1.Location = new System.Drawing.Point(20, 369);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.guna2TextBox1.Multiline = true;
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(501, 179);
-            this.guna2TextBox1.TabIndex = 37;
+            this.txtObservacao.BorderColor = System.Drawing.Color.Gray;
+            this.txtObservacao.BorderRadius = 5;
+            this.txtObservacao.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtObservacao.DefaultText = "";
+            this.txtObservacao.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtObservacao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtObservacao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtObservacao.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtObservacao.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            this.txtObservacao.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.txtObservacao.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtObservacao.ForeColor = System.Drawing.Color.Gray;
+            this.txtObservacao.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.txtObservacao.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtObservacao.IconLeftSize = new System.Drawing.Size(15, 15);
+            this.txtObservacao.Location = new System.Drawing.Point(19, 446);
+            this.txtObservacao.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtObservacao.Multiline = true;
+            this.txtObservacao.Name = "txtObservacao";
+            this.txtObservacao.PlaceholderText = "";
+            this.txtObservacao.SelectedText = "";
+            this.txtObservacao.Size = new System.Drawing.Size(501, 102);
+            this.txtObservacao.TabIndex = 37;
             // 
             // guna2HtmlLabel9
             // 
@@ -427,7 +504,7 @@
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(21, 343);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(20, 420);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(79, 20);
             this.guna2HtmlLabel9.TabIndex = 36;
@@ -439,27 +516,27 @@
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(289, 264);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(288, 341);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(100, 20);
             this.guna2HtmlLabel8.TabIndex = 35;
             this.guna2HtmlLabel8.Text = "Descanso (seg)";
             // 
-            // guna2NumericUpDown3
+            // numDescanso
             // 
-            this.guna2NumericUpDown3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown3.BorderColor = System.Drawing.Color.Gray;
-            this.guna2NumericUpDown3.BorderRadius = 5;
-            this.guna2NumericUpDown3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            this.guna2NumericUpDown3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.guna2NumericUpDown3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown3.ForeColor = System.Drawing.Color.Gray;
-            this.guna2NumericUpDown3.Location = new System.Drawing.Point(289, 286);
-            this.guna2NumericUpDown3.Name = "guna2NumericUpDown3";
-            this.guna2NumericUpDown3.Size = new System.Drawing.Size(100, 36);
-            this.guna2NumericUpDown3.TabIndex = 34;
-            this.guna2NumericUpDown3.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.numDescanso.BackColor = System.Drawing.Color.Transparent;
+            this.numDescanso.BorderColor = System.Drawing.Color.Gray;
+            this.numDescanso.BorderRadius = 5;
+            this.numDescanso.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.numDescanso.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            this.numDescanso.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.numDescanso.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.numDescanso.ForeColor = System.Drawing.Color.Gray;
+            this.numDescanso.Location = new System.Drawing.Point(288, 363);
+            this.numDescanso.Name = "numDescanso";
+            this.numDescanso.Size = new System.Drawing.Size(100, 36);
+            this.numDescanso.TabIndex = 34;
+            this.numDescanso.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             // 
             // guna2HtmlLabel7
             // 
@@ -467,27 +544,27 @@
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(155, 264);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(154, 341);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(73, 20);
             this.guna2HtmlLabel7.TabIndex = 33;
             this.guna2HtmlLabel7.Text = "Repetições";
             // 
-            // guna2NumericUpDown2
+            // numRepeticoes
             // 
-            this.guna2NumericUpDown2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown2.BorderColor = System.Drawing.Color.Gray;
-            this.guna2NumericUpDown2.BorderRadius = 5;
-            this.guna2NumericUpDown2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            this.guna2NumericUpDown2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.guna2NumericUpDown2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown2.ForeColor = System.Drawing.Color.Gray;
-            this.guna2NumericUpDown2.Location = new System.Drawing.Point(155, 286);
-            this.guna2NumericUpDown2.Name = "guna2NumericUpDown2";
-            this.guna2NumericUpDown2.Size = new System.Drawing.Size(100, 36);
-            this.guna2NumericUpDown2.TabIndex = 32;
-            this.guna2NumericUpDown2.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.numRepeticoes.BackColor = System.Drawing.Color.Transparent;
+            this.numRepeticoes.BorderColor = System.Drawing.Color.Gray;
+            this.numRepeticoes.BorderRadius = 5;
+            this.numRepeticoes.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.numRepeticoes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            this.numRepeticoes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.numRepeticoes.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.numRepeticoes.ForeColor = System.Drawing.Color.Gray;
+            this.numRepeticoes.Location = new System.Drawing.Point(154, 363);
+            this.numRepeticoes.Name = "numRepeticoes";
+            this.numRepeticoes.Size = new System.Drawing.Size(100, 36);
+            this.numRepeticoes.TabIndex = 32;
+            this.numRepeticoes.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             // 
             // guna2HtmlLabel6
             // 
@@ -495,54 +572,54 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(22, 264);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(21, 341);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(43, 20);
             this.guna2HtmlLabel6.TabIndex = 31;
             this.guna2HtmlLabel6.Text = "Séries";
             // 
-            // guna2NumericUpDown1
+            // numSeries
             // 
-            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown1.BorderColor = System.Drawing.Color.Gray;
-            this.guna2NumericUpDown1.BorderRadius = 5;
-            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            this.guna2NumericUpDown1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown1.ForeColor = System.Drawing.Color.Gray;
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(21, 286);
-            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(99, 36);
-            this.guna2NumericUpDown1.TabIndex = 30;
-            this.guna2NumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.numSeries.BackColor = System.Drawing.Color.Transparent;
+            this.numSeries.BorderColor = System.Drawing.Color.Gray;
+            this.numSeries.BorderRadius = 5;
+            this.numSeries.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.numSeries.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            this.numSeries.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.numSeries.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.numSeries.ForeColor = System.Drawing.Color.Gray;
+            this.numSeries.Location = new System.Drawing.Point(20, 363);
+            this.numSeries.Name = "numSeries";
+            this.numSeries.Size = new System.Drawing.Size(99, 36);
+            this.numSeries.TabIndex = 30;
+            this.numSeries.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             // 
-            // guna2ComboBox3
+            // cmbExercicio
             // 
-            this.guna2ComboBox3.AutoCompleteCustomSource.AddRange(new string[] {
+            this.cmbExercicio.AutoCompleteCustomSource.AddRange(new string[] {
             "A - Peito + Triceps "});
-            this.guna2ComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox3.BorderColor = System.Drawing.Color.Gray;
-            this.guna2ComboBox3.BorderRadius = 5;
-            this.guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            this.guna2ComboBox3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox3.ForeColor = System.Drawing.Color.Gray;
-            this.guna2ComboBox3.ItemHeight = 30;
-            this.guna2ComboBox3.Items.AddRange(new object[] {
+            this.cmbExercicio.BackColor = System.Drawing.Color.Transparent;
+            this.cmbExercicio.BorderColor = System.Drawing.Color.Gray;
+            this.cmbExercicio.BorderRadius = 5;
+            this.cmbExercicio.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbExercicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbExercicio.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            this.cmbExercicio.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.cmbExercicio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.cmbExercicio.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbExercicio.ForeColor = System.Drawing.Color.Gray;
+            this.cmbExercicio.ItemHeight = 30;
+            this.cmbExercicio.Items.AddRange(new object[] {
             "Supino reto",
             "Supino inclinado",
             "Crucifixo",
             "Crossover",
             "Tríceps pulley",
             "Tríceps francês"});
-            this.guna2ComboBox3.Location = new System.Drawing.Point(21, 213);
-            this.guna2ComboBox3.Name = "guna2ComboBox3";
-            this.guna2ComboBox3.Size = new System.Drawing.Size(502, 36);
-            this.guna2ComboBox3.TabIndex = 29;
+            this.cmbExercicio.Location = new System.Drawing.Point(20, 290);
+            this.cmbExercicio.Name = "cmbExercicio";
+            this.cmbExercicio.Size = new System.Drawing.Size(502, 36);
+            this.cmbExercicio.TabIndex = 29;
             // 
             // guna2HtmlLabel5
             // 
@@ -550,28 +627,28 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(21, 188);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(20, 265);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(59, 20);
             this.guna2HtmlLabel5.TabIndex = 28;
             this.guna2HtmlLabel5.Text = "Exercício";
             // 
-            // guna2ComboBox2
+            // cmbGrupoMuscular
             // 
-            this.guna2ComboBox2.AutoCompleteCustomSource.AddRange(new string[] {
+            this.cmbGrupoMuscular.AutoCompleteCustomSource.AddRange(new string[] {
             "A - Peito + Triceps "});
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderColor = System.Drawing.Color.Gray;
-            this.guna2ComboBox2.BorderRadius = 5;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.Gray;
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Items.AddRange(new object[] {
+            this.cmbGrupoMuscular.BackColor = System.Drawing.Color.Transparent;
+            this.cmbGrupoMuscular.BorderColor = System.Drawing.Color.Gray;
+            this.cmbGrupoMuscular.BorderRadius = 5;
+            this.cmbGrupoMuscular.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbGrupoMuscular.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGrupoMuscular.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            this.cmbGrupoMuscular.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.cmbGrupoMuscular.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.cmbGrupoMuscular.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbGrupoMuscular.ForeColor = System.Drawing.Color.Gray;
+            this.cmbGrupoMuscular.ItemHeight = 30;
+            this.cmbGrupoMuscular.Items.AddRange(new object[] {
             "Peito",
             "Costas",
             "Pernas",
@@ -579,10 +656,11 @@
             "Abdomên ",
             "Tríceps",
             "Bíceps"});
-            this.guna2ComboBox2.Location = new System.Drawing.Point(21, 147);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(501, 36);
-            this.guna2ComboBox2.TabIndex = 27;
+            this.cmbGrupoMuscular.Location = new System.Drawing.Point(20, 224);
+            this.cmbGrupoMuscular.Name = "cmbGrupoMuscular";
+            this.cmbGrupoMuscular.Size = new System.Drawing.Size(501, 36);
+            this.cmbGrupoMuscular.TabIndex = 27;
+            this.cmbGrupoMuscular.SelectedIndexChanged += new System.EventHandler(this.cmbGrupoMuscular_SelectedIndexChanged);
             // 
             // guna2HtmlLabel4
             // 
@@ -590,37 +668,37 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(21, 122);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(20, 199);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(105, 20);
             this.guna2HtmlLabel4.TabIndex = 26;
             this.guna2HtmlLabel4.Text = "Grupo Muscular";
             // 
-            // guna2ComboBox1
+            // cmbDivisao
             // 
-            this.guna2ComboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            this.cmbDivisao.AutoCompleteCustomSource.AddRange(new string[] {
             "A - Peito + Triceps "});
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.Gray;
-            this.guna2ComboBox1.BorderRadius = 5;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Gray;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.cmbDivisao.BackColor = System.Drawing.Color.Transparent;
+            this.cmbDivisao.BorderColor = System.Drawing.Color.Gray;
+            this.cmbDivisao.BorderRadius = 5;
+            this.cmbDivisao.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbDivisao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDivisao.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            this.cmbDivisao.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.cmbDivisao.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.cmbDivisao.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbDivisao.ForeColor = System.Drawing.Color.Gray;
+            this.cmbDivisao.ItemHeight = 30;
+            this.cmbDivisao.Items.AddRange(new object[] {
             "A - Peito + Tríceps + Abdômen",
             "B - Costas + Bíceps + Abdômen",
             "C - Pernas (Quadríceps)",
             "D - Ombro + Trapézio + Abdômen",
             "E - Posterior + Glúteo"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(21, 81);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(501, 36);
-            this.guna2ComboBox1.TabIndex = 25;
+            this.cmbDivisao.Location = new System.Drawing.Point(20, 158);
+            this.cmbDivisao.Name = "cmbDivisao";
+            this.cmbDivisao.Size = new System.Drawing.Size(501, 36);
+            this.cmbDivisao.TabIndex = 25;
             // 
             // guna2HtmlLabel3
             // 
@@ -628,7 +706,7 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(21, 56);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(20, 133);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(160, 20);
             this.guna2HtmlLabel3.TabIndex = 24;
@@ -651,7 +729,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(50)))));
             this.guna2Panel1.BorderRadius = 20;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.lbMeusTreinos);
+            this.guna2Panel1.Controls.Add(this.lblNomeCliente);
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
             this.guna2Panel1.Location = new System.Drawing.Point(357, 138);
@@ -659,17 +737,17 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1355, 154);
             this.guna2Panel1.TabIndex = 1;
             // 
-            // lbMeusTreinos
+            // lblNomeCliente
             // 
-            this.lbMeusTreinos.AutoSize = true;
-            this.lbMeusTreinos.BackColor = System.Drawing.Color.Transparent;
-            this.lbMeusTreinos.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMeusTreinos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbMeusTreinos.Location = new System.Drawing.Point(206, 64);
-            this.lbMeusTreinos.Name = "lbMeusTreinos";
-            this.lbMeusTreinos.Size = new System.Drawing.Size(92, 30);
-            this.lbMeusTreinos.TabIndex = 20;
-            this.lbMeusTreinos.Text = "Usuario";
+            this.lblNomeCliente.AutoSize = true;
+            this.lblNomeCliente.BackColor = System.Drawing.Color.Transparent;
+            this.lblNomeCliente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNomeCliente.Location = new System.Drawing.Point(206, 64);
+            this.lblNomeCliente.Name = "lblNomeCliente";
+            this.lblNomeCliente.Size = new System.Drawing.Size(92, 30);
+            this.lblNomeCliente.TabIndex = 20;
+            this.lblNomeCliente.Text = "Usuario";
             // 
             // pictureBox1
             // 
@@ -772,6 +850,7 @@
             this.btnSair.TabIndex = 35;
             this.btnSair.TabStop = false;
             this.btnSair.Text = "Sair";
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnMeusTreinos
             // 
@@ -797,6 +876,7 @@
             this.btnMeusTreinos.TabStop = false;
             this.btnMeusTreinos.Text = "Meus treinos";
             this.btnMeusTreinos.UseTransparentBackground = true;
+            this.btnMeusTreinos.Click += new System.EventHandler(this.btnMeusTreinos_Click);
             // 
             // imLogoCliente
             // 
@@ -837,15 +917,16 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IHMAdm2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.IHMAdm2_Load);
             this.pnPrincipal.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExercicios)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOrdem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDescanso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numRepeticoes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSeries)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -859,7 +940,7 @@
 
         private Guna.UI2.WinForms.Guna2GradientPanel pnPrincipal;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label lbMeusTreinos;
+        private System.Windows.Forms.Label lblNomeCliente;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbSubtitulo;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbOla;
@@ -874,33 +955,36 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbDivisao;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbGrupoMuscular;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbExercicio;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
+        private Guna.UI2.WinForms.Guna2NumericUpDown numSeries;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown3;
+        private Guna.UI2.WinForms.Guna2NumericUpDown numDescanso;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown2;
+        private Guna.UI2.WinForms.Guna2NumericUpDown numRepeticoes;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2Button btnAdicionar;
+        private Guna.UI2.WinForms.Guna2TextBox txtObservacao;
+        private Guna.UI2.WinForms.Guna2Button btnAdicionarExercicio;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown4;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn USUARIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EMAIL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ACOES;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EXCLUIR;
+        private Guna.UI2.WinForms.Guna2NumericUpDown numOrdem;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvExercicios;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
+        private Guna.UI2.WinForms.Guna2Button btnSalvarTreino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colGrupoMuscular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colExercicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSeries;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRepeticoes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDescanso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colObservacao;
+        private System.Windows.Forms.DataGridViewButtonColumn colExcluir;
+        private Guna.UI2.WinForms.Guna2TextBox txtNomeTreino;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblNomeTreino;
     }
 }

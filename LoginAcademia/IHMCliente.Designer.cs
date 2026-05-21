@@ -28,48 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnLateral = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbTitulo2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbTitulo1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnPerfil = new Guna.UI2.WinForms.Guna2Button();
             this.btnSair = new Guna.UI2.WinForms.Guna2Button();
             this.btnMeusTreinos = new Guna.UI2.WinForms.Guna2Button();
+            this.imLogoCliente = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbSubtituloCliente = new System.Windows.Forms.Label();
             this.lbMeusTreinos = new System.Windows.Forms.Label();
+            this.imHalter = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnPrincipal = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.dgvTreinosCliente = new Guna.UI2.WinForms.Guna2DataGridView();
             this.lbData = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbSubtitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbNomeCliente = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbOla = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.imLogoCliente = new System.Windows.Forms.PictureBox();
-            this.imHalter = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodigoExercicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ordem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Treino = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Divisão = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Inicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GrupoMuscular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Exercício = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Series = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Repetições = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descanso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Observação = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCodigoTreino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCodigoTreinoExercicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colOrdem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTreino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDivisao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGrupoMuscular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colExercicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSeries = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRepeticoes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescanso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colObservacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnLateral.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
-            this.pnPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imLogoCliente)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imHalter)).BeginInit();
+            this.pnPrincipal.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTreinosCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // pnLateral
@@ -191,6 +191,18 @@
             this.btnMeusTreinos.Text = "Meus treinos";
             this.btnMeusTreinos.UseTransparentBackground = true;
             // 
+            // imLogoCliente
+            // 
+            this.imLogoCliente.BackColor = System.Drawing.Color.Transparent;
+            this.imLogoCliente.Image = global::LoginAcademia.Properties.Resources.ChatGPT_Image_14_de_mai__de_2026__17_10_07;
+            this.imLogoCliente.Location = new System.Drawing.Point(95, 2);
+            this.imLogoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.imLogoCliente.Name = "imLogoCliente";
+            this.imLogoCliente.Size = new System.Drawing.Size(116, 89);
+            this.imLogoCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imLogoCliente.TabIndex = 22;
+            this.imLogoCliente.TabStop = false;
+            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(50)))));
@@ -229,6 +241,17 @@
             this.lbMeusTreinos.TabIndex = 20;
             this.lbMeusTreinos.Text = "Meus treinos";
             // 
+            // imHalter
+            // 
+            this.imHalter.Image = global::LoginAcademia.Properties.Resources.halter_removebg_preview;
+            this.imHalter.ImageRotate = 0F;
+            this.imHalter.Location = new System.Drawing.Point(-5, 0);
+            this.imHalter.Name = "imHalter";
+            this.imHalter.Size = new System.Drawing.Size(194, 163);
+            this.imHalter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imHalter.TabIndex = 22;
+            this.imHalter.TabStop = false;
+            // 
             // pnPrincipal
             // 
             this.pnPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -249,6 +272,105 @@
             this.pnPrincipal.Name = "pnPrincipal";
             this.pnPrincipal.Size = new System.Drawing.Size(1724, 1095);
             this.pnPrincipal.TabIndex = 2;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(50)))));
+            this.guna2Panel2.BorderRadius = 20;
+            this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.dgvTreinosCliente);
+            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            this.guna2Panel2.Location = new System.Drawing.Point(436, 303);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(1356, 696);
+            this.guna2Panel2.TabIndex = 25;
+            // 
+            // dgvTreinosCliente
+            // 
+            this.dgvTreinosCliente.AllowUserToAddRows = false;
+            this.dgvTreinosCliente.AllowUserToDeleteRows = false;
+            this.dgvTreinosCliente.AllowUserToResizeColumns = false;
+            this.dgvTreinosCliente.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvTreinosCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvTreinosCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTreinosCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvTreinosCliente.ColumnHeadersHeight = 45;
+            this.dgvTreinosCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvTreinosCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colCodigoTreino,
+            this.colCodigoTreinoExercicio,
+            this.colOrdem,
+            this.colTreino,
+            this.colDivisao,
+            this.colInicio,
+            this.colFim,
+            this.colGrupoMuscular,
+            this.colExercicio,
+            this.colSeries,
+            this.colRepeticoes,
+            this.colDescanso,
+            this.colObservacao});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTreinosCliente.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvTreinosCliente.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvTreinosCliente.Location = new System.Drawing.Point(75, 13);
+            this.dgvTreinosCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvTreinosCliente.Name = "dgvTreinosCliente";
+            this.dgvTreinosCliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTreinosCliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvTreinosCliente.RowHeadersVisible = false;
+            this.dgvTreinosCliente.RowHeadersWidth = 51;
+            this.dgvTreinosCliente.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvTreinosCliente.RowTemplate.Height = 30;
+            this.dgvTreinosCliente.Size = new System.Drawing.Size(1279, 547);
+            this.dgvTreinosCliente.TabIndex = 30;
+            this.dgvTreinosCliente.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
+            this.dgvTreinosCliente.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvTreinosCliente.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvTreinosCliente.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(11)))), ((int)(((byte)(255)))));
+            this.dgvTreinosCliente.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvTreinosCliente.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            this.dgvTreinosCliente.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvTreinosCliente.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.dgvTreinosCliente.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvTreinosCliente.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvTreinosCliente.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvTreinosCliente.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvTreinosCliente.ThemeStyle.HeaderStyle.Height = 45;
+            this.dgvTreinosCliente.ThemeStyle.ReadOnly = false;
+            this.dgvTreinosCliente.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
+            this.dgvTreinosCliente.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvTreinosCliente.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvTreinosCliente.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvTreinosCliente.ThemeStyle.RowsStyle.Height = 30;
+            this.dgvTreinosCliente.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(11)))), ((int)(((byte)(255)))));
+            this.dgvTreinosCliente.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
             // lbData
             // 
@@ -298,195 +420,72 @@
             this.lbOla.TabIndex = 2;
             this.lbOla.Text = "Olá, ";
             // 
-            // imLogoCliente
+            // colCodigoTreino
             // 
-            this.imLogoCliente.BackColor = System.Drawing.Color.Transparent;
-            this.imLogoCliente.Image = global::LoginAcademia.Properties.Resources.ChatGPT_Image_14_de_mai__de_2026__17_10_07;
-            this.imLogoCliente.Location = new System.Drawing.Point(95, 2);
-            this.imLogoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.imLogoCliente.Name = "imLogoCliente";
-            this.imLogoCliente.Size = new System.Drawing.Size(116, 89);
-            this.imLogoCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imLogoCliente.TabIndex = 22;
-            this.imLogoCliente.TabStop = false;
+            this.colCodigoTreino.HeaderText = "CODIGO TREINO";
+            this.colCodigoTreino.Name = "colCodigoTreino";
+            this.colCodigoTreino.Visible = false;
             // 
-            // imHalter
+            // colCodigoTreinoExercicio
             // 
-            this.imHalter.Image = global::LoginAcademia.Properties.Resources.halter_removebg_preview;
-            this.imHalter.ImageRotate = 0F;
-            this.imHalter.Location = new System.Drawing.Point(-5, 0);
-            this.imHalter.Name = "imHalter";
-            this.imHalter.Size = new System.Drawing.Size(194, 163);
-            this.imHalter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imHalter.TabIndex = 22;
-            this.imHalter.TabStop = false;
+            this.colCodigoTreinoExercicio.HeaderText = "CODIGO EXERCICIO TREINO";
+            this.colCodigoTreinoExercicio.Name = "colCodigoTreinoExercicio";
+            this.colCodigoTreinoExercicio.Visible = false;
             // 
-            // guna2Panel2
+            // colOrdem
             // 
-            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(50)))));
-            this.guna2Panel2.BorderRadius = 20;
-            this.guna2Panel2.BorderThickness = 1;
-            this.guna2Panel2.Controls.Add(this.guna2DataGridView1);
-            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(436, 303);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1356, 696);
-            this.guna2Panel2.TabIndex = 25;
+            this.colOrdem.HeaderText = "ORDEM";
+            this.colOrdem.Name = "colOrdem";
             // 
-            // guna2DataGridView1
+            // colTreino
             // 
-            this.guna2DataGridView1.AllowUserToAddRows = false;
-            this.guna2DataGridView1.AllowUserToDeleteRows = false;
-            this.guna2DataGridView1.AllowUserToResizeColumns = false;
-            this.guna2DataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            this.guna2DataGridView1.ColumnHeadersHeight = 45;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.CodigoExercicio,
-            this.Ordem,
-            this.Treino,
-            this.Divisão,
-            this.Inicio,
-            this.Fim,
-            this.GrupoMuscular,
-            this.Exercício,
-            this.Series,
-            this.Repetições,
-            this.Descanso,
-            this.Observação});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(75, 13);
-            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.RowHeadersWidth = 51;
-            this.guna2DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.guna2DataGridView1.RowTemplate.Height = 30;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1279, 547);
-            this.guna2DataGridView1.TabIndex = 30;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(11)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 45;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 30;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(11)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.colTreino.HeaderText = "TREINO";
+            this.colTreino.Name = "colTreino";
             // 
-            // Codigo
+            // colDivisao
             // 
-            this.Codigo.HeaderText = "CODIGO TREINO";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Visible = false;
+            this.colDivisao.HeaderText = "DIVISÃO";
+            this.colDivisao.Name = "colDivisao";
             // 
-            // CodigoExercicio
+            // colInicio
             // 
-            this.CodigoExercicio.HeaderText = "CODIGO EXERCICIO TREINO";
-            this.CodigoExercicio.Name = "CodigoExercicio";
-            this.CodigoExercicio.Visible = false;
+            this.colInicio.HeaderText = "INICIO";
+            this.colInicio.Name = "colInicio";
             // 
-            // Ordem
+            // colFim
             // 
-            this.Ordem.HeaderText = "ORDEM";
-            this.Ordem.Name = "Ordem";
+            this.colFim.HeaderText = "FIM";
+            this.colFim.Name = "colFim";
             // 
-            // Treino
+            // colGrupoMuscular
             // 
-            this.Treino.HeaderText = "TREINO";
-            this.Treino.Name = "Treino";
+            this.colGrupoMuscular.HeaderText = "GRUPO M.";
+            this.colGrupoMuscular.Name = "colGrupoMuscular";
             // 
-            // Divisão
+            // colExercicio
             // 
-            this.Divisão.HeaderText = "DIVISÃO";
-            this.Divisão.Name = "Divisão";
+            this.colExercicio.HeaderText = "EXERCICIO";
+            this.colExercicio.Name = "colExercicio";
             // 
-            // Inicio
+            // colSeries
             // 
-            this.Inicio.HeaderText = "INICIO";
-            this.Inicio.Name = "Inicio";
+            this.colSeries.HeaderText = "SÉRIES";
+            this.colSeries.Name = "colSeries";
             // 
-            // Fim
+            // colRepeticoes
             // 
-            this.Fim.HeaderText = "FIM";
-            this.Fim.Name = "Fim";
+            this.colRepeticoes.HeaderText = "REPETIÇÕES";
+            this.colRepeticoes.Name = "colRepeticoes";
             // 
-            // GrupoMuscular
+            // colDescanso
             // 
-            this.GrupoMuscular.HeaderText = "GRUPO M.";
-            this.GrupoMuscular.Name = "GrupoMuscular";
+            this.colDescanso.HeaderText = "DESCANSO";
+            this.colDescanso.Name = "colDescanso";
             // 
-            // Exercício
+            // colObservacao
             // 
-            this.Exercício.HeaderText = "EXERCICIO";
-            this.Exercício.Name = "Exercício";
-            // 
-            // Series
-            // 
-            this.Series.HeaderText = "SÉRIES";
-            this.Series.Name = "Series";
-            // 
-            // Repetições
-            // 
-            this.Repetições.HeaderText = "REPETIÇÕES";
-            this.Repetições.Name = "Repetições";
-            // 
-            // Descanso
-            // 
-            this.Descanso.HeaderText = "DESCANSO";
-            this.Descanso.Name = "Descanso";
-            // 
-            // Observação
-            // 
-            this.Observação.HeaderText = "OBS.";
-            this.Observação.Name = "Observação";
+            this.colObservacao.HeaderText = "OBS.";
+            this.colObservacao.Name = "colObservacao";
             // 
             // IHMCliente
             // 
@@ -503,13 +502,13 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.IHMCliente_Load);
             this.pnLateral.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imLogoCliente)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            this.pnPrincipal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.imLogoCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imHalter)).EndInit();
+            this.pnPrincipal.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTreinosCliente)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -532,19 +531,19 @@
         private Guna.UI2.WinForms.Guna2PictureBox imHalter;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbData;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoExercicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ordem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Treino;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Divisão;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Inicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fim;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GrupoMuscular;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Exercício;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Series;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Repetições;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descanso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Observação;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvTreinosCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCodigoTreino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCodigoTreinoExercicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colOrdem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTreino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDivisao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colInicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colGrupoMuscular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colExercicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSeries;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRepeticoes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDescanso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colObservacao;
     }
 }

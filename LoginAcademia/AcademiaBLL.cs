@@ -48,14 +48,24 @@ namespace LoginAcademia
         public static void validacaotelefone(string txtNumero)
         {
             Erro.setErro(false);
+
             if (string.IsNullOrWhiteSpace(txtNumero))
             {
                 Erro.setMsg("O Telefone é inválido!");
                 return;
             }
-            if (!Regex.IsMatch(txtNumero, @"^\(\d{2}\)\s\d{5}-\d{4}$"))
+
+            string numeros = Regex.Replace(txtNumero, @"\D", "");
+
+            if (numeros.Length != 11)
             {
-                Erro.setMsg("O Telefone é inválido!");
+                Erro.setMsg("O Telefone deve conter DDD + 9 dígitos.");
+                return;
+            }
+
+            if (!Regex.IsMatch(numeros, @"^\d{11}$"))
+            {
+                Erro.setMsg("O Telefone deve conter apenas números.");
                 return;
             }
         }
@@ -102,75 +112,67 @@ namespace LoginAcademia
 
         //Validação CEP
 
-        public static async Task<Endereco> buscarcepinternet(string txtCep)
+        public static async Task<Endereco> buscarcepinternet(string cep)
         {
-            // Valida o formato antes de gastar internet à toa
-            validacaocep(txtCep);
+            Erro.setErro(false);
+
+            cep = Regex.Replace(cep, @"\D", "");
+
+            validacaocep(cep);
 
             if (Erro.getErro())
             {
                 return null;
             }
 
-            // Limpa formatação para a URL
-            string cepLimpo = Regex.Replace(txtCep, @"\D", "");
-
-            using (HttpClient client = new HttpClient())
+            try
             {
-                try
+                using (HttpClient client = new HttpClient())
                 {
-                    string url = $"https://viacep.com.br/ws/{cepLimpo}/json/";
-                    HttpResponseMessage response = await client.GetAsync(url);
+                    string url = "https://viacep.com.br/ws/" + cep + "/json/";
+                    string json = await client.GetStringAsync(url);
 
-                    if (response.IsSuccessStatusCode)
+                    Endereco endereco = JsonSerializer.Deserialize<Endereco>(json);
+
+                    if (endereco == null || endereco.ErroViaCep)
                     {
-                        string jsonString = await response.Content.ReadAsStringAsync();
-
-                        // O ViaCEP retorna o campo "erro": true dentro do JSON caso o CEP não exista
-                        if (jsonString.Contains("\"erro\":") || jsonString.Contains("true"))
-                        {
-                            Erro.setErro(true);
-                            Erro.setMsg("CEP Não Foi Encontrado!");
-                            return null;
-                        }
-
-                        // Configuração opcional para ignorar maiúsculas/minúsculas se necessário
-                        var options = new JsonSerializerOptions
-                        {
-                            PropertyNameCaseInsensitive = true
-                        };
-
-                        // DESSERIALIZAÇÃO: Transforma o texto JSON no objeto Endereco do C#
-                        Endereco end = JsonSerializer.Deserialize<Endereco>(jsonString, options);
-                        return end;
-                    }
-                    else
-                    {
-                        Erro.setErro(true);
-                        Erro.setMsg("Falha ao conectar com o serviço de CEP!");
+                        Erro.setMsg("CEP não encontrado!");
                         return null;
                     }
-                }
-                catch (Exception)
-                {
-                    Erro.setErro(true);
-                    Erro.setMsg("Erro de conexão. Verifique sua internet!");
-                    return null;
+
+                    endereco.setCep(cep);
+
+                    return endereco;
                 }
             }
+            catch
+            {
+                Erro.setMsg("Erro ao buscar CEP. Verifique sua conexão.");
+                return null;
+            }
         }
-        public static void validacaocep(string txtCep)
+
+        public static void validacaocep(string cep)
         {
             Erro.setErro(false);
-            if (string.IsNullOrWhiteSpace(txtCep))
+
+            if (string.IsNullOrWhiteSpace(cep))
             {
                 Erro.setMsg("O CEP é inválido!");
                 return;
             }
 
-            if (!Regex.IsMatch(txtCep, @"^\d{5}-\d{3}$"))
+            cep = Regex.Replace(cep, @"\D", "");
+
+            if (cep.Length != 8)
             {
-                Erro.setMsg("O CEP é inválido!");
+                Erro.setMsg("O CEP deve conter 8 números!");
+                return;
+            }
+
+            if (!Regex.IsMatch(cep, @"^\d{8}$"))
+            {
+                Erro.setMsg("O CEP deve conter apenas números!");
                 return;
             }
         }
@@ -227,43 +229,25 @@ namespace LoginAcademia
         public static void validacaousuario(string txtUsuario)
         {
             Erro.setErro(false);
+
             if (string.IsNullOrWhiteSpace(txtUsuario))
             {
                 Erro.setMsg("O Usuário é inválido!");
                 return;
             }
 
-            bool ultimoFoiEspaco = false;
-
-            // Não pode começar ou terminar com espaço
-            if (txtUsuario[0] == ' ' || txtUsuario[txtUsuario.Length - 1] == ' ')
+            if (txtUsuario.Length < 3 || txtUsuario.Length > 30)
             {
-                Erro.setMsg("O Usuário é inválido!");
+                Erro.setMsg("O Usuário deve ter entre 3 e 30 caracteres!");
                 return;
             }
 
             foreach (char c in txtUsuario)
             {
-                // Verifica se é letra ou espaço
-                if (!char.IsLetterOrDigit(c) && c != ' ')
+                if (!char.IsLetterOrDigit(c))
                 {
-                    Erro.setMsg("O Usuário é inválido!");
+                    Erro.setMsg("O Usuário deve conter apenas letras e números!");
                     return;
-                }
-
-                // Verifica espaço duplo
-                if (c == ' ')
-                {
-                    if (ultimoFoiEspaco)
-                    {
-                        Erro.setMsg("O Usuário é inválido!");
-                        return;
-                    }
-                    ultimoFoiEspaco = true;
-                }
-                else
-                {
-                    ultimoFoiEspaco = false;
                 }
             }
         }
@@ -353,6 +337,309 @@ namespace LoginAcademia
                 Erro.setMsg("Informe seu usuário ou email!");
                 return;
             }
+        }
+
+        public static void validacaoExercicioTreino(TreinoExercicio exercicio)
+        {
+            Erro.setErro(false);
+
+            if (exercicio == null)
+            {
+                Erro.setMsg("Exercício inválido.");
+                return;
+            }
+
+            if (exercicio.getCdExercicio() <= 0)
+            {
+                Erro.setMsg("Selecione um exercício.");
+                return;
+            }
+
+            if (exercicio.getNrOrdem() <= 0)
+            {
+                Erro.setMsg("A ordem do exercício deve ser maior que zero.");
+                return;
+            }
+
+            if (exercicio.getQtSeries() <= 0)
+            {
+                Erro.setMsg("A quantidade de séries deve ser maior que zero.");
+                return;
+            }
+
+            if (exercicio.getQtRepeticoes() <= 0)
+            {
+                Erro.setMsg("A quantidade de repetições deve ser maior que zero.");
+                return;
+            }
+
+            if (exercicio.getQtDescansoSegundos() < 0)
+            {
+                Erro.setMsg("O descanso não pode ser negativo.");
+                return;
+            }
+
+            if (exercicio.getDsObservacao() != null && exercicio.getDsObservacao().Length > 500)
+            {
+                Erro.setMsg("A observação deve ter no máximo 500 caracteres.");
+                return;
+            }
+        }
+        public static void validacaoTreino(Treino treino, List<TreinoExercicio> exercicios)
+        {
+            Erro.setErro(false);
+
+            if (treino == null)
+            {
+                Erro.setMsg("Treino inválido.");
+                return;
+            }
+
+            string nomeTreino = treino.getNmTreino();
+
+            if (string.IsNullOrWhiteSpace(nomeTreino))
+            {
+                Erro.setMsg("Informe o nome do treino.");
+                return;
+            }
+
+            if (nomeTreino != nomeTreino.Trim())
+            {
+                Erro.setMsg("O nome do treino não pode começar ou terminar com espaço.");
+                return;
+            }
+
+            if (nomeTreino.Contains("  "))
+            {
+                Erro.setMsg("O nome do treino não pode conter mais de um espaço seguido.");
+                return;
+            }
+
+            if (nomeTreino.Length < 3)
+            {
+                Erro.setMsg("O nome do treino deve ter pelo menos 3 caracteres.");
+                return;
+            }
+
+            if (nomeTreino.Length > 100)
+            {
+                Erro.setMsg("O nome do treino deve ter no máximo 100 caracteres.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(treino.getTpDivisao()))
+            {
+                Erro.setMsg("Selecione a divisão do treino.");
+                return;
+            }
+
+            if (treino.getTpDivisao() != "A" &&
+                treino.getTpDivisao() != "B" &&
+                treino.getTpDivisao() != "C" &&
+                treino.getTpDivisao() != "D" &&
+                treino.getTpDivisao() != "E")
+            {
+                Erro.setMsg("Divisão inválida.");
+                return;
+            }
+
+            if (treino.getCdUsuario() <= 0)
+            {
+                Erro.setMsg("Cliente inválido.");
+                return;
+            }
+
+            if (treino.getCdAdmin() <= 0)
+            {
+                Erro.setMsg("Administrador inválido.");
+                return;
+            }
+
+            if (exercicios == null || exercicios.Count == 0)
+            {
+                Erro.setMsg("Adicione pelo menos um exercício ao treino.");
+                return;
+            }
+        }
+        public static void inserirTreino(Treino treino, List<TreinoExercicio> exercicios)
+        {
+            Erro.setErro(false);
+
+            validacaoTreino(treino, exercicios);
+
+            if (Erro.getErro())
+            {
+                return;
+            }
+
+            foreach (TreinoExercicio exercicio in exercicios)
+            {
+                validacaoExercicioTreino(exercicio);
+
+                if (Erro.getErro())
+                {
+                    return;
+                }
+            }
+
+            AcademiaDAL.insereTreino(treino, exercicios);
+        }
+
+        public static void editarTreino(Treino treino, List<TreinoExercicio> exercicios)
+        {
+            Erro.setErro(false);
+
+            if (treino == null)
+            {
+                Erro.setMsg("Treino inválido.");
+                return;
+            }
+
+            if (treino.getCdTreino() <= 0)
+            {
+                Erro.setMsg("Código do treino inválido.");
+                return;
+            }
+
+            validacaoTreino(treino, exercicios);
+
+            if (Erro.getErro())
+            {
+                return;
+            }
+
+            foreach (TreinoExercicio exercicio in exercicios)
+            {
+                validacaoExercicioTreino(exercicio);
+
+                if (Erro.getErro())
+                {
+                    return;
+                }
+            }
+
+            AcademiaDAL.editaTreino(treino, exercicios);
+        }
+
+        public static void deletarTreino(int cdTreino)
+        {
+            Erro.setErro(false);
+
+            if (cdTreino <= 0)
+            {
+                Erro.setMsg("Treino inválido.");
+                return;
+            }
+
+            AcademiaDAL.deletaTreino(cdTreino);
+        }
+
+        public static void editarPerfil(Login_Cadastro lc, Endereco end)
+        {
+            Erro.setErro(false);
+
+            if (lc == null)
+            {
+                Erro.setMsg("Usuário inválido.");
+                return;
+            }
+
+            if (end == null)
+            {
+                Erro.setMsg("Endereço inválido.");
+                return;
+            }
+
+            if (lc.getCdUsuario() <= 0)
+            {
+                Erro.setMsg("Código do usuário inválido.");
+                return;
+            }
+
+            validacaousuario(lc.getUsuario());
+
+            if (Erro.getErro())
+            {
+                return;
+            }
+
+            validacaoemail(lc.getEmail());
+
+            if (Erro.getErro())
+            {
+                return;
+            }
+
+            validacaotelefone(lc.getTelefone());
+
+            if (Erro.getErro())
+            {
+                return;
+            }
+
+            validacaocep(end.getCep());
+
+            if (Erro.getErro())
+            {
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(end.getRua()))
+            {
+                Erro.setMsg("Busque um CEP válido para preencher a rua.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(end.getNumero()))
+            {
+                Erro.setMsg("Informe o número.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(end.getBairro()))
+            {
+                Erro.setMsg("Busque um CEP válido para preencher o bairro.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(end.getCidade()))
+            {
+                Erro.setMsg("Busque um CEP válido para preencher a cidade.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(end.getEstado()))
+            {
+                Erro.setMsg("Busque um CEP válido para preencher o estado.");
+                return;
+            }
+
+            if (!Regex.IsMatch(end.getEstado(), @"^[A-Z]{2}$"))
+            {
+                Erro.setMsg("O estado deve conter a sigla com 2 letras maiúsculas.");
+                return;
+            }
+
+            if (!string.IsNullOrWhiteSpace(end.getComplemento()) && end.getComplemento().Length > 50)
+            {
+                Erro.setMsg("O complemento deve ter no máximo 50 caracteres.");
+                return;
+            }
+
+            AcademiaDAL.editaPerfil(lc, end);
+        }
+
+        public static void deletarUsuario(int cdUsuario)
+        {
+            Erro.setErro(false);
+
+            if (cdUsuario <= 0)
+            {
+                Erro.setMsg("Usuário inválido.");
+                return;
+            }
+
+            AcademiaDAL.deletaUsuario(cdUsuario);
         }
     }
 }
