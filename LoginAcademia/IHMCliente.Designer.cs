@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnLateral = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbTitulo2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbTitulo1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -39,20 +43,33 @@
             this.lbMeusTreinos = new System.Windows.Forms.Label();
             this.pnPrincipal = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbData = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lbDescricaoCliente = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbSubtitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbNomeCliente = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbOla = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.imPrancheta = new Guna.UI2.WinForms.Guna2PictureBox();
             this.imLogoCliente = new System.Windows.Forms.PictureBox();
             this.imHalter = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodigoExercicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ordem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Treino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Divisão = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Inicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GrupoMuscular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Exercício = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Series = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Repetições = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descanso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Observação = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnLateral.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.pnPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imPrancheta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imLogoCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imHalter)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnLateral
@@ -183,9 +200,9 @@
             this.guna2Panel1.Controls.Add(this.lbMeusTreinos);
             this.guna2Panel1.Controls.Add(this.imHalter);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(357, 190);
+            this.guna2Panel1.Location = new System.Drawing.Point(436, 126);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1313, 163);
+            this.guna2Panel1.Size = new System.Drawing.Size(1356, 163);
             this.guna2Panel1.TabIndex = 1;
             // 
             // lbSubtituloCliente
@@ -218,10 +235,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnPrincipal.BackColor = System.Drawing.Color.Transparent;
+            this.pnPrincipal.Controls.Add(this.guna2Panel2);
             this.pnPrincipal.Controls.Add(this.lbData);
-            this.pnPrincipal.Controls.Add(this.guna2HtmlLabel1);
-            this.pnPrincipal.Controls.Add(this.lbDescricaoCliente);
-            this.pnPrincipal.Controls.Add(this.imPrancheta);
             this.pnPrincipal.Controls.Add(this.lbSubtitulo);
             this.pnPrincipal.Controls.Add(this.lbNomeCliente);
             this.pnPrincipal.Controls.Add(this.lbOla);
@@ -241,33 +256,11 @@
             this.lbData.BackColor = System.Drawing.Color.Transparent;
             this.lbData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbData.ForeColor = System.Drawing.Color.Gray;
-            this.lbData.Location = new System.Drawing.Point(1544, 74);
+            this.lbData.Location = new System.Drawing.Point(1656, 58);
             this.lbData.Name = "lbData";
             this.lbData.Size = new System.Drawing.Size(137, 35);
             this.lbData.TabIndex = 8;
             this.lbData.Text = "18 de Maio, 2026";
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(714, 614);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(364, 21);
-            this.guna2HtmlLabel1.TabIndex = 7;
-            this.guna2HtmlLabel1.Text = "Fale com seu treinador para criar seu primeiro treino!";
-            // 
-            // lbDescricaoCliente
-            // 
-            this.lbDescricaoCliente.BackColor = System.Drawing.Color.Transparent;
-            this.lbDescricaoCliente.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDescricaoCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbDescricaoCliente.Location = new System.Drawing.Point(690, 561);
-            this.lbDescricaoCliente.Name = "lbDescricaoCliente";
-            this.lbDescricaoCliente.Size = new System.Drawing.Size(410, 30);
-            this.lbDescricaoCliente.TabIndex = 6;
-            this.lbDescricaoCliente.Text = "Você ainda não possui treinos cadastrados. ";
             // 
             // lbSubtitulo
             // 
@@ -275,7 +268,7 @@
             this.lbSubtitulo.BackColor = System.Drawing.Color.Transparent;
             this.lbSubtitulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSubtitulo.ForeColor = System.Drawing.Color.Gray;
-            this.lbSubtitulo.Location = new System.Drawing.Point(357, 89);
+            this.lbSubtitulo.Location = new System.Drawing.Point(436, 73);
             this.lbSubtitulo.Name = "lbSubtitulo";
             this.lbSubtitulo.Size = new System.Drawing.Size(194, 35);
             this.lbSubtitulo.TabIndex = 4;
@@ -287,7 +280,7 @@
             this.lbNomeCliente.BackColor = System.Drawing.Color.Transparent;
             this.lbNomeCliente.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNomeCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbNomeCliente.Location = new System.Drawing.Point(406, 47);
+            this.lbNomeCliente.Location = new System.Drawing.Point(485, 31);
             this.lbNomeCliente.Name = "lbNomeCliente";
             this.lbNomeCliente.Size = new System.Drawing.Size(103, 35);
             this.lbNomeCliente.TabIndex = 3;
@@ -299,25 +292,11 @@
             this.lbOla.BackColor = System.Drawing.Color.Transparent;
             this.lbOla.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOla.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbOla.Location = new System.Drawing.Point(357, 47);
+            this.lbOla.Location = new System.Drawing.Point(436, 31);
             this.lbOla.Name = "lbOla";
             this.lbOla.Size = new System.Drawing.Size(62, 35);
             this.lbOla.TabIndex = 2;
             this.lbOla.Text = "Olá, ";
-            // 
-            // imPrancheta
-            // 
-            this.imPrancheta.BorderRadius = 30;
-            this.imPrancheta.Image = global::LoginAcademia.Properties.Resources.image_removebg_preview;
-            this.imPrancheta.ImageRotate = 0F;
-            this.imPrancheta.Location = new System.Drawing.Point(796, 404);
-            this.imPrancheta.Name = "imPrancheta";
-            this.imPrancheta.ShadowDecoration.BorderRadius = 20;
-            this.imPrancheta.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.imPrancheta.Size = new System.Drawing.Size(184, 135);
-            this.imPrancheta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imPrancheta.TabIndex = 5;
-            this.imPrancheta.TabStop = false;
             // 
             // imLogoCliente
             // 
@@ -342,6 +321,173 @@
             this.imHalter.TabIndex = 22;
             this.imHalter.TabStop = false;
             // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(50)))));
+            this.guna2Panel2.BorderRadius = 20;
+            this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.guna2DataGridView1);
+            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            this.guna2Panel2.Location = new System.Drawing.Point(436, 303);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(1356, 696);
+            this.guna2Panel2.TabIndex = 25;
+            // 
+            // guna2DataGridView1
+            // 
+            this.guna2DataGridView1.AllowUserToAddRows = false;
+            this.guna2DataGridView1.AllowUserToDeleteRows = false;
+            this.guna2DataGridView1.AllowUserToResizeColumns = false;
+            this.guna2DataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.guna2DataGridView1.ColumnHeadersHeight = 45;
+            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.CodigoExercicio,
+            this.Ordem,
+            this.Treino,
+            this.Divisão,
+            this.Inicio,
+            this.Fim,
+            this.GrupoMuscular,
+            this.Exercício,
+            this.Series,
+            this.Repetições,
+            this.Descanso,
+            this.Observação});
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
+            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.Location = new System.Drawing.Point(75, 13);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2DataGridView1.Name = "guna2DataGridView1";
+            this.guna2DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.guna2DataGridView1.RowHeadersVisible = false;
+            this.guna2DataGridView1.RowHeadersWidth = 51;
+            this.guna2DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.guna2DataGridView1.RowTemplate.Height = 30;
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1279, 547);
+            this.guna2DataGridView1.TabIndex = 30;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(11)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 45;
+            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 30;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(11)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "CODIGO TREINO";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Visible = false;
+            // 
+            // CodigoExercicio
+            // 
+            this.CodigoExercicio.HeaderText = "CODIGO EXERCICIO TREINO";
+            this.CodigoExercicio.Name = "CodigoExercicio";
+            this.CodigoExercicio.Visible = false;
+            // 
+            // Ordem
+            // 
+            this.Ordem.HeaderText = "ORDEM";
+            this.Ordem.Name = "Ordem";
+            // 
+            // Treino
+            // 
+            this.Treino.HeaderText = "TREINO";
+            this.Treino.Name = "Treino";
+            // 
+            // Divisão
+            // 
+            this.Divisão.HeaderText = "DIVISÃO";
+            this.Divisão.Name = "Divisão";
+            // 
+            // Inicio
+            // 
+            this.Inicio.HeaderText = "INICIO";
+            this.Inicio.Name = "Inicio";
+            // 
+            // Fim
+            // 
+            this.Fim.HeaderText = "FIM";
+            this.Fim.Name = "Fim";
+            // 
+            // GrupoMuscular
+            // 
+            this.GrupoMuscular.HeaderText = "GRUPO M.";
+            this.GrupoMuscular.Name = "GrupoMuscular";
+            // 
+            // Exercício
+            // 
+            this.Exercício.HeaderText = "EXERCICIO";
+            this.Exercício.Name = "Exercício";
+            // 
+            // Series
+            // 
+            this.Series.HeaderText = "SÉRIES";
+            this.Series.Name = "Series";
+            // 
+            // Repetições
+            // 
+            this.Repetições.HeaderText = "REPETIÇÕES";
+            this.Repetições.Name = "Repetições";
+            // 
+            // Descanso
+            // 
+            this.Descanso.HeaderText = "DESCANSO";
+            this.Descanso.Name = "Descanso";
+            // 
+            // Observação
+            // 
+            this.Observação.HeaderText = "OBS.";
+            this.Observação.Name = "Observação";
+            // 
             // IHMCliente
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -360,10 +506,10 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.pnPrincipal.ResumeLayout(false);
-            this.pnPrincipal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imPrancheta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imLogoCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imHalter)).EndInit();
+            this.guna2Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -384,9 +530,21 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lbOla;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbSubtitulo;
         private Guna.UI2.WinForms.Guna2PictureBox imHalter;
-        private Guna.UI2.WinForms.Guna2PictureBox imPrancheta;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbDescricaoCliente;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbData;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoExercicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ordem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Treino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Divisão;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Inicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GrupoMuscular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Exercício;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Series;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Repetições;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descanso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Observação;
     }
 }
