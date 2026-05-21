@@ -177,9 +177,11 @@
             this.txtSenha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtSenha.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.txtSenha.IconLeft = global::LoginAcademia.Properties.Resources.iconesSenha;
+            this.txtSenha.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.txtSenha.IconLeftOffset = new System.Drawing.Point(3, 0);
             this.txtSenha.IconLeftSize = new System.Drawing.Size(15, 15);
             this.txtSenha.IconRight = global::LoginAcademia.Properties.Resources.iconesSenha2;
+            this.txtSenha.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.txtSenha.IconRightOffset = new System.Drawing.Point(5, 0);
             this.txtSenha.IconRightSize = new System.Drawing.Size(20, 15);
             this.txtSenha.Location = new System.Drawing.Point(40, 311);

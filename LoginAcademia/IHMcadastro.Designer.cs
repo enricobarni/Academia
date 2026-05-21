@@ -68,10 +68,10 @@
             this.txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNome = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbSenhaCadastro = new System.Windows.Forms.Label();
-            this.lbNome = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbNome = new System.Windows.Forms.Label();
             this.pnCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -296,6 +296,7 @@
             this.txtConfirmarsenha.IconLeftOffset = new System.Drawing.Point(3, 0);
             this.txtConfirmarsenha.IconLeftSize = new System.Drawing.Size(15, 15);
             this.txtConfirmarsenha.IconRight = global::LoginAcademia.Properties.Resources.iconesSenha2;
+            this.txtConfirmarsenha.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.txtConfirmarsenha.IconRightOffset = new System.Drawing.Point(5, 0);
             this.txtConfirmarsenha.IconRightSize = new System.Drawing.Size(20, 15);
             this.txtConfirmarsenha.Location = new System.Drawing.Point(40, 501);
@@ -791,6 +792,7 @@
             this.txtSenha.IconLeftOffset = new System.Drawing.Point(3, 0);
             this.txtSenha.IconLeftSize = new System.Drawing.Size(15, 15);
             this.txtSenha.IconRight = global::LoginAcademia.Properties.Resources.iconesSenha2;
+            this.txtSenha.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.txtSenha.IconRightOffset = new System.Drawing.Point(5, 0);
             this.txtSenha.IconRightSize = new System.Drawing.Size(20, 15);
             this.txtSenha.Location = new System.Drawing.Point(40, 421);
@@ -840,18 +842,6 @@
             this.lbSenhaCadastro.TabIndex = 20;
             this.lbSenhaCadastro.Text = "SENHA";
             // 
-            // lbNome
-            // 
-            this.lbNome.AutoSize = true;
-            this.lbNome.BackColor = System.Drawing.Color.Transparent;
-            this.lbNome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNome.ForeColor = System.Drawing.Color.Gray;
-            this.lbNome.Location = new System.Drawing.Point(37, 159);
-            this.lbNome.Name = "lbNome";
-            this.lbNome.Size = new System.Drawing.Size(61, 23);
-            this.lbNome.TabIndex = 19;
-            this.lbNome.Text = "NOME";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -885,6 +875,18 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
+            // 
+            // lbNome
+            // 
+            this.lbNome.AutoSize = true;
+            this.lbNome.BackColor = System.Drawing.Color.Transparent;
+            this.lbNome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNome.ForeColor = System.Drawing.Color.Gray;
+            this.lbNome.Location = new System.Drawing.Point(37, 159);
+            this.lbNome.Name = "lbNome";
+            this.lbNome.Size = new System.Drawing.Size(61, 23);
+            this.lbNome.TabIndex = 19;
+            this.lbNome.Text = "NOME";
             // 
             // IHMCadastro
             // 
