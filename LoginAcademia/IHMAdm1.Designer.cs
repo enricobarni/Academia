@@ -36,6 +36,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IHMAdm1));
             this.pnPrincipal = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbData = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -63,6 +64,8 @@
             this.lbSubtituloAdmin = new System.Windows.Forms.Label();
             this.lbMeusTreinosAdm = new System.Windows.Forms.Label();
             this.imHalterAdm = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnPrincipal.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -70,6 +73,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.imLogoAdm)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imHalterAdm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnPrincipal
@@ -91,7 +96,7 @@
             this.pnPrincipal.Location = new System.Drawing.Point(0, 1);
             this.pnPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.pnPrincipal.Name = "pnPrincipal";
-            this.pnPrincipal.Size = new System.Drawing.Size(1724, 1093);
+            this.pnPrincipal.Size = new System.Drawing.Size(1898, 1169);
             this.pnPrincipal.TabIndex = 3;
             // 
             // lbData
@@ -329,6 +334,8 @@
             this.pnLateralAdm.BackColor = System.Drawing.Color.Transparent;
             this.pnLateralAdm.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.pnLateralAdm.BorderThickness = 1;
+            this.pnLateralAdm.Controls.Add(this.guna2PictureBox1);
+            this.pnLateralAdm.Controls.Add(this.guna2PictureBox2);
             this.pnLateralAdm.Controls.Add(this.lbTitulo2Adm);
             this.pnLateralAdm.Controls.Add(this.lbTitulo1Adm);
             this.pnLateralAdm.Controls.Add(this.btnSairAdm);
@@ -337,7 +344,7 @@
             this.pnLateralAdm.Location = new System.Drawing.Point(0, 1);
             this.pnLateralAdm.Margin = new System.Windows.Forms.Padding(2);
             this.pnLateralAdm.Name = "pnLateralAdm";
-            this.pnLateralAdm.Size = new System.Drawing.Size(303, 892);
+            this.pnLateralAdm.Size = new System.Drawing.Size(303, 968);
             this.pnLateralAdm.TabIndex = 1;
             this.pnLateralAdm.UseTransparentBackground = true;
             // 
@@ -511,12 +518,36 @@
             this.imHalterAdm.TabIndex = 22;
             this.imHalterAdm.TabStop = false;
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(25, 141);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(252, 14);
+            this.guna2PictureBox2.TabIndex = 29;
+            this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(23, 976);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(252, 14);
+            this.guna2PictureBox1.TabIndex = 38;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
+            // 
             // IHMAdm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(1427, 894);
+            this.ClientSize = new System.Drawing.Size(1601, 970);
             this.Controls.Add(this.pnPrincipal);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -534,6 +565,8 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imHalterAdm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -571,5 +604,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colEstado;
         private System.Windows.Forms.DataGridViewButtonColumn colEditar;
         private System.Windows.Forms.DataGridViewButtonColumn colExcluir;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

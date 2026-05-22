@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IHMCliente));
             this.pnLateral = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbTitulo2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbTitulo1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -46,10 +47,6 @@
             this.pnPrincipal = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvTreinosCliente = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.lbData = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lbSubtitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lbNomeCliente = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lbOla = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.colCodigoTreino = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCodigoTreinoExercicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colOrdem = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +60,12 @@
             this.colRepeticoes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDescanso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colObservacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbData = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbSubtitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbNomeCliente = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbOla = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imLogoCliente)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -70,6 +73,8 @@
             this.pnPrincipal.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTreinosCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnLateral
@@ -79,6 +84,8 @@
             this.pnLateral.BackColor = System.Drawing.Color.Transparent;
             this.pnLateral.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.pnLateral.BorderThickness = 1;
+            this.pnLateral.Controls.Add(this.guna2PictureBox2);
+            this.pnLateral.Controls.Add(this.guna2PictureBox1);
             this.pnLateral.Controls.Add(this.lbTitulo2);
             this.pnLateral.Controls.Add(this.lbTitulo1);
             this.pnLateral.Controls.Add(this.btnPerfil);
@@ -372,54 +379,6 @@
             this.dgvTreinosCliente.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(11)))), ((int)(((byte)(255)))));
             this.dgvTreinosCliente.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
-            // lbData
-            // 
-            this.lbData.AutoSize = false;
-            this.lbData.BackColor = System.Drawing.Color.Transparent;
-            this.lbData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbData.ForeColor = System.Drawing.Color.Gray;
-            this.lbData.Location = new System.Drawing.Point(1656, 58);
-            this.lbData.Name = "lbData";
-            this.lbData.Size = new System.Drawing.Size(137, 35);
-            this.lbData.TabIndex = 8;
-            this.lbData.Text = "18 de Maio, 2026";
-            // 
-            // lbSubtitulo
-            // 
-            this.lbSubtitulo.AutoSize = false;
-            this.lbSubtitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lbSubtitulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSubtitulo.ForeColor = System.Drawing.Color.Gray;
-            this.lbSubtitulo.Location = new System.Drawing.Point(436, 73);
-            this.lbSubtitulo.Name = "lbSubtitulo";
-            this.lbSubtitulo.Size = new System.Drawing.Size(194, 35);
-            this.lbSubtitulo.TabIndex = 4;
-            this.lbSubtitulo.Text = "Vamos evoluir hoje!";
-            // 
-            // lbNomeCliente
-            // 
-            this.lbNomeCliente.AutoSize = false;
-            this.lbNomeCliente.BackColor = System.Drawing.Color.Transparent;
-            this.lbNomeCliente.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNomeCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbNomeCliente.Location = new System.Drawing.Point(485, 31);
-            this.lbNomeCliente.Name = "lbNomeCliente";
-            this.lbNomeCliente.Size = new System.Drawing.Size(103, 35);
-            this.lbNomeCliente.TabIndex = 3;
-            this.lbNomeCliente.Text = "Nome!";
-            // 
-            // lbOla
-            // 
-            this.lbOla.AutoSize = false;
-            this.lbOla.BackColor = System.Drawing.Color.Transparent;
-            this.lbOla.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbOla.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbOla.Location = new System.Drawing.Point(436, 31);
-            this.lbOla.Name = "lbOla";
-            this.lbOla.Size = new System.Drawing.Size(62, 35);
-            this.lbOla.TabIndex = 2;
-            this.lbOla.Text = "Olá, ";
-            // 
             // colCodigoTreino
             // 
             this.colCodigoTreino.HeaderText = "CODIGO TREINO";
@@ -487,6 +446,76 @@
             this.colObservacao.HeaderText = "OBS.";
             this.colObservacao.Name = "colObservacao";
             // 
+            // lbData
+            // 
+            this.lbData.AutoSize = false;
+            this.lbData.BackColor = System.Drawing.Color.Transparent;
+            this.lbData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbData.ForeColor = System.Drawing.Color.Gray;
+            this.lbData.Location = new System.Drawing.Point(1656, 58);
+            this.lbData.Name = "lbData";
+            this.lbData.Size = new System.Drawing.Size(137, 35);
+            this.lbData.TabIndex = 8;
+            this.lbData.Text = "18 de Maio, 2026";
+            // 
+            // lbSubtitulo
+            // 
+            this.lbSubtitulo.AutoSize = false;
+            this.lbSubtitulo.BackColor = System.Drawing.Color.Transparent;
+            this.lbSubtitulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSubtitulo.ForeColor = System.Drawing.Color.Gray;
+            this.lbSubtitulo.Location = new System.Drawing.Point(436, 73);
+            this.lbSubtitulo.Name = "lbSubtitulo";
+            this.lbSubtitulo.Size = new System.Drawing.Size(194, 35);
+            this.lbSubtitulo.TabIndex = 4;
+            this.lbSubtitulo.Text = "Vamos evoluir hoje!";
+            // 
+            // lbNomeCliente
+            // 
+            this.lbNomeCliente.AutoSize = false;
+            this.lbNomeCliente.BackColor = System.Drawing.Color.Transparent;
+            this.lbNomeCliente.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNomeCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbNomeCliente.Location = new System.Drawing.Point(485, 31);
+            this.lbNomeCliente.Name = "lbNomeCliente";
+            this.lbNomeCliente.Size = new System.Drawing.Size(103, 35);
+            this.lbNomeCliente.TabIndex = 3;
+            this.lbNomeCliente.Text = "Nome!";
+            // 
+            // lbOla
+            // 
+            this.lbOla.AutoSize = false;
+            this.lbOla.BackColor = System.Drawing.Color.Transparent;
+            this.lbOla.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbOla.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbOla.Location = new System.Drawing.Point(436, 31);
+            this.lbOla.Name = "lbOla";
+            this.lbOla.Size = new System.Drawing.Size(62, 35);
+            this.lbOla.TabIndex = 2;
+            this.lbOla.Text = "Olá, ";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(23, 141);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(252, 14);
+            this.guna2PictureBox1.TabIndex = 26;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(23, 976);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(252, 14);
+            this.guna2PictureBox2.TabIndex = 38;
+            this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.UseTransparentBackground = true;
+            // 
             // IHMCliente
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -509,6 +538,8 @@
             this.pnPrincipal.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTreinosCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -545,5 +576,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colRepeticoes;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescanso;
         private System.Windows.Forms.DataGridViewTextBoxColumn colObservacao;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
