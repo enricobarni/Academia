@@ -53,5 +53,12 @@ namespace LoginAcademia
             formCliente.Show();
             this.Close();
         }
+
+        private void btnEditarPerfil_Click(object sender, EventArgs e)
+        {
+            IHMEditarPerfil formEditar = new IHMEditarPerfil(usuarioLogado);
+            formEditar.Show();
+            this.Close();
+        }
     }
 }

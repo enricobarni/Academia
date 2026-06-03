@@ -66,8 +66,10 @@
             this.lbMeusTreinos = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnPrincipal = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbSubtitulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbOla = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnEditarPerfil = new Guna.UI2.WinForms.Guna2Button();
             this.pnLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imLogoCliente)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -103,7 +105,7 @@
             this.pnLateral.Controls.Add(this.imLogoCliente);
             this.pnLateral.Location = new System.Drawing.Point(0, 0);
             this.pnLateral.Name = "pnLateral";
-            this.pnLateral.Size = new System.Drawing.Size(303, 1092);
+            this.pnLateral.Size = new System.Drawing.Size(303, 1091);
             this.pnLateral.TabIndex = 1;
             this.pnLateral.UseTransparentBackground = true;
             // 
@@ -224,6 +226,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(50)))));
             this.guna2Panel1.BorderRadius = 20;
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.btnEditarPerfil);
             this.guna2Panel1.Controls.Add(this.pictureBox8);
             this.guna2Panel1.Controls.Add(this.guna2Panel7);
             this.guna2Panel1.Controls.Add(this.guna2Panel6);
@@ -235,7 +238,7 @@
             this.guna2Panel1.Controls.Add(this.lbMeusTreinos);
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(357, 188);
+            this.guna2Panel1.Location = new System.Drawing.Point(436, 133);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1355, 807);
             this.guna2Panel1.TabIndex = 1;
@@ -580,6 +583,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnPrincipal.BackColor = System.Drawing.Color.Transparent;
+            this.pnPrincipal.Controls.Add(this.guna2HtmlLabel1);
             this.pnPrincipal.Controls.Add(this.guna2Panel1);
             this.pnPrincipal.Controls.Add(this.lbSubtitulo);
             this.pnPrincipal.Controls.Add(this.lbOla);
@@ -589,8 +593,20 @@
             this.pnPrincipal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(15)))));
             this.pnPrincipal.Location = new System.Drawing.Point(0, 0);
             this.pnPrincipal.Name = "pnPrincipal";
-            this.pnPrincipal.Size = new System.Drawing.Size(1724, 1095);
+            this.pnPrincipal.Size = new System.Drawing.Size(1724, 1094);
             this.pnPrincipal.TabIndex = 2;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.AutoSize = false;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Gray;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(1656, 35);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(137, 35);
+            this.guna2HtmlLabel1.TabIndex = 24;
+            this.guna2HtmlLabel1.Text = "18 de Maio, 2026";
             // 
             // lbSubtitulo
             // 
@@ -598,7 +614,7 @@
             this.lbSubtitulo.BackColor = System.Drawing.Color.Transparent;
             this.lbSubtitulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSubtitulo.ForeColor = System.Drawing.Color.Gray;
-            this.lbSubtitulo.Location = new System.Drawing.Point(357, 85);
+            this.lbSubtitulo.Location = new System.Drawing.Point(436, 70);
             this.lbSubtitulo.Name = "lbSubtitulo";
             this.lbSubtitulo.Size = new System.Drawing.Size(252, 30);
             this.lbSubtitulo.TabIndex = 4;
@@ -610,11 +626,38 @@
             this.lbOla.BackColor = System.Drawing.Color.Transparent;
             this.lbOla.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOla.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbOla.Location = new System.Drawing.Point(357, 45);
+            this.lbOla.Location = new System.Drawing.Point(436, 30);
             this.lbOla.Name = "lbOla";
             this.lbOla.Size = new System.Drawing.Size(124, 35);
             this.lbOla.TabIndex = 2;
             this.lbOla.Text = "Meu Perfil";
+            // 
+            // btnEditarPerfil
+            // 
+            this.btnEditarPerfil.Animated = true;
+            this.btnEditarPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditarPerfil.BorderRadius = 5;
+            this.btnEditarPerfil.BorderThickness = 2;
+            this.btnEditarPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditarPerfil.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditarPerfil.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditarPerfil.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEditarPerfil.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEditarPerfil.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.btnEditarPerfil.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnEditarPerfil.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarPerfil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEditarPerfil.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.btnEditarPerfil.Location = new System.Drawing.Point(963, 91);
+            this.btnEditarPerfil.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditarPerfil.Name = "btnEditarPerfil";
+            this.btnEditarPerfil.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
+            this.btnEditarPerfil.ShadowDecoration.Enabled = true;
+            this.btnEditarPerfil.Size = new System.Drawing.Size(300, 37);
+            this.btnEditarPerfil.TabIndex = 27;
+            this.btnEditarPerfil.TabStop = false;
+            this.btnEditarPerfil.Text = "EDITAR PERFIL";
+            this.btnEditarPerfil.Click += new System.EventHandler(this.btnEditarPerfil_Click);
             // 
             // IHMPerfil
             // 
@@ -699,5 +742,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Button btnEditarPerfil;
     }
 }

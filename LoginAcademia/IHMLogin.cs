@@ -33,6 +33,9 @@ namespace LoginAcademia
         {
             lblErroUsuario.Text = "";
             lblErroSenha.Text = "";
+            lblErroUsuario.Visible = false;
+            lblErroSenha.Visible = false;
+
             bool possuiErro = false;
 
             AcademiaBLL.validacaologin(txtUsuario.Text);
@@ -43,10 +46,9 @@ namespace LoginAcademia
                 possuiErro = true;
             }
 
-            AcademiaBLL.validacaosenha(txtSenha.Text);
-            if (Erro.getErro())
+            if (string.IsNullOrWhiteSpace(txtSenha.Text))
             {
-                lblErroSenha.Text = Erro.getMsg();
+                lblErroSenha.Text = "Digite sua senha!";
                 lblErroSenha.Visible = true;
                 possuiErro = true;
             }
@@ -64,7 +66,6 @@ namespace LoginAcademia
                 return;
             }
 
-            // Verifica a senha com BCrypt
             if (!BCrypt.Net.BCrypt.Verify(txtSenha.Text, academia.getSenha()))
             {
                 lblErroUsuario.Text = "Usuário ou senha incorretos!";
@@ -74,11 +75,11 @@ namespace LoginAcademia
                 return;
             }
 
-            // Redireciona conforme perfil
             if (academia.getIcAdmin())
             {
-                // new frmMenuAdmin(academia).Show(); // quando tiver a tela admin
-                MessageBox.Show("Bem-vindo, Admin " + academia.getNome() + "!");
+                IHMAdm1 formAdmin = new IHMAdm1(academia);
+                formAdmin.Show();
+                this.Hide();
             }
             else
             {

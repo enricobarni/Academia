@@ -133,6 +133,12 @@
     <Compile Include="IHMAdm2.Designer.cs">
       <DependentUpon>IHMAdm2.cs</DependentUpon>
     </Compile>
+    <Compile Include="IHMAdmMeio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHMAdmMeio.Designer.cs">
+      <DependentUpon>IHMAdmMeio.cs</DependentUpon>
+    </Compile>
     <Compile Include="IHMCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,12 @@
     </Compile>
     <Compile Include="IHMCliente.Designer.cs">
       <DependentUpon>IHMCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHMEditarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHMEditarPerfil.Designer.cs">
+      <DependentUpon>IHMEditarPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="IHMPerfil.cs">
       <SubType>Form</SubType>
@@ -160,17 +172,25 @@
     <Compile Include="Login_Cadastro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Treino.cs" />
+    <Compile Include="TreinoExercico.cs" />
     <EmbeddedResource Include="IHMAdm1.resx">
       <DependentUpon>IHMAdm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IHMAdm2.resx">
       <DependentUpon>IHMAdm2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IHMAdmMeio.resx">
+      <DependentUpon>IHMAdmMeio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IHMCadastro.resx">
       <DependentUpon>IHMCadastro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IHMCliente.resx">
       <DependentUpon>IHMCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHMEditarPerfil.resx">
+      <DependentUpon>IHMEditarPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IHMPerfil.resx">
       <DependentUpon>IHMPerfil.cs</DependentUpon>

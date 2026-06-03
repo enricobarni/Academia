@@ -138,8 +138,8 @@ CREATE TABLE Treino (
     nm_treino   VARCHAR(100) NOT NULL,
     ds_treino   VARCHAR(500) NULL,
     tp_divisao  CHAR(1)      NOT NULL,   -- [4] A, B, C, D ou E
-    dt_inicio   DATETIME2    NOT NULL,
-    dt_fim      DATETIME2    NULL,
+    dt_inicio   DATETIME2    NOT NULL CONSTRAINT DF_Treino_dtInicio DEFAULT GETDATE(),
+    dt_fim      AS DATEADD(MONTH, 2, dt_inicio) PERSISTED,
     cd_usuario  INT          NOT NULL,   -- cliente dono do treino
     cd_admin    INT          NOT NULL,   -- admin que criou o treino
     ic_ativo    BIT          NOT NULL CONSTRAINT DF_Treino_icAtivo DEFAULT 1,
@@ -147,13 +147,21 @@ CREATE TABLE Treino (
 
     CONSTRAINT PK_Treino PRIMARY KEY (cd_treino),
 
+    -- nome do treino: aceita espaco entre palavras, mas nao no inicio/fim nem espaco duplicado
+    CONSTRAINT CK_Treino_nmTreino
+        CHECK (
+            LEN(nm_treino) >= 3
+            AND nm_treino = LTRIM(RTRIM(nm_treino))
+            AND nm_treino NOT LIKE '%  %'
+        ),
+
     -- [4] divisao restrita a A, B, C, D ou E
     CONSTRAINT CK_Treino_divisao
         CHECK (tp_divisao IN ('A','B','C','D','E')),
 
-    -- data de fim nao pode ser anterior a data de inicio
+    -- dt_fim e calculada automaticamente como 2 meses apos dt_inicio
     CONSTRAINT CK_Treino_datas
-        CHECK (dt_fim IS NULL OR dt_fim >= dt_inicio),
+        CHECK (dt_fim >= dt_inicio),
 
     -- cliente: CASCADE — treinos removidos ao excluir o usuario
     CONSTRAINT FK_Treino_Usuario
@@ -197,7 +205,7 @@ CREATE TABLE TreinoExercicio (
     CONSTRAINT CK_TreinoEx_ordem
         CHECK (nr_ordem >= 1),
 
-    -- CASCADE: exercicios removidos ao excluir o treino
+    -- CASCADE: ao excluir um treino, todos os exercicios vinculados em TreinoExercicio sao removidos automaticamente
     CONSTRAINT FK_TreinoEx_Treino
         FOREIGN KEY (cd_treino)
         REFERENCES Treino(cd_treino)
@@ -257,35 +265,90 @@ GO
 
 -- ------------------------------------------------------------
 -- 10. SEED — Exercicios
+--     Foram adicionados mais 6 exercicios para cada grupo muscular.
 -- ------------------------------------------------------------
 INSERT INTO Exercicio (nm_exercicio, ds_exercicio, cd_grupoMuscular) VALUES
--- Peito (1)
-('Supino Reto',        'Exercicio base para peitoral com barra ou halteres',      1),
-('Crucifixo',          'Isolamento de peitoral em banco plano',                   1),
-('Flexao de Bracos',   'Exercicio funcional para peitoral e triceps',             1),
--- Costas (2)
-('Puxada Frontal',     'Desenvolve o latissimo do dorso na polia alta',           2),
-('Remada Curvada',     'Exercicio composto para espessura de costas',             2),
-('Levantamento Terra', 'Movimento fundamental para cadeia posterior',             2),
--- Ombro (3)
-('Desenvolvimento',    'Elevacao de barra ou halteres acima da cabeca',           3),
-('Elevacao Lateral',   'Isolamento do deltoide medial com halteres',              3),
--- Biceps (4)
-('Rosca Direta',       'Curl com barra ou halteres para biceps',                  4),
-('Rosca Martelo',      'Variacao neutra — trabalha braquial e braquiorradial',    4),
--- Triceps (5)
-('Triceps Pulley',     'Extensao no cabo para isolamento do triceps',             5),
-('Triceps Frances',    'Extensao de testa com barra ou halteres',                5),
-('Mergulho',           'Exercicio composto para triceps e peitoral inferior',     5),
--- Pernas (6)
-('Agachamento',        'Movimento base para quadriceps, gluteos e isquiotibiais', 6),
-('Leg Press',          'Agachamento guiado na maquina',                           6),
-('Cadeira Extensora',  'Isolamento de quadriceps na maquina',                     6),
--- Abdomen (7)
-('Abdominal Crunch',   'Exercicio classico de flexao de tronco',                  7),
-('Prancha Isometrica', 'Estabilizacao do core sem movimento dinamico',            7);
-GO
+-- Peito (1) - existentes
+('Supino Reto',              'Exercicio base para peitoral com barra ou halteres',             1),
+('Crucifixo',                'Isolamento de peitoral em banco plano',                          1),
+('Flexao de Bracos',         'Exercicio funcional para peitoral e triceps',                    1),
+-- Peito (1) - novos
+('Supino Inclinado',         'Variacao inclinada com foco na parte superior do peitoral',      1),
+('Supino Declinado',         'Variacao declinada com foco na parte inferior do peitoral',      1),
+('Crossover',                'Aducao horizontal no cabo para isolamento do peitoral',           1),
+('Peck Deck',                'Crucifixo guiado na maquina para peitoral',                      1),
+('Flexao Inclinada',         'Flexao com maos elevadas, menor intensidade',                    1),
+('Flexao Declinada',         'Flexao com pes elevados, maior foco no peitoral superior',       1),
 
+-- Costas (2) - existentes
+('Puxada Frontal',           'Desenvolve o latissimo do dorso na polia alta',                  2),
+('Remada Curvada',           'Exercicio composto para espessura de costas',                    2),
+('Levantamento Terra',       'Movimento fundamental para cadeia posterior',                    2),
+-- Costas (2) - novos
+('Remada Baixa',             'Remada sentada na polia para dorsais e romboides',               2),
+('Remada Unilateral',        'Remada com halter para trabalhar cada lado das costas',          2),
+('Pullover na Polia',        'Movimento de extensao de ombro com foco em dorsais',             2),
+('Barra Fixa',               'Exercicio com peso corporal para dorsais e biceps',              2),
+('Puxada Neutra',            'Puxada na polia com pegada neutra',                              2),
+('Remada Cavalinho',         'Remada com apoio ou barra T para espessura dorsal',              2),
+
+-- Ombro (3) - existentes
+('Desenvolvimento',          'Elevacao de barra ou halteres acima da cabeca',                  3),
+('Elevacao Lateral',         'Isolamento do deltoide medial com halteres',                     3),
+-- Ombro (3) - novos
+('Elevacao Frontal',         'Isolamento do deltoide anterior com halteres ou barra',          3),
+('Crucifixo Inverso',        'Movimento para deltoide posterior',                              3),
+('Desenvolvimento Arnold',   'Variacao do desenvolvimento com rotacao dos halteres',           3),
+('Remada Alta',              'Exercicio para deltoides e trapezio',                            3),
+('Face Pull',                'Puxada para deltoide posterior e estabilidade escapular',        3),
+('Elevacao Lateral na Polia','Variacao na polia para tensao constante no deltoide medial',     3),
+
+-- Biceps (4) - existentes
+('Rosca Direta',             'Curl com barra ou halteres para biceps',                         4),
+('Rosca Martelo',            'Variacao neutra que trabalha braquial e braquiorradial',         4),
+-- Biceps (4) - novos
+('Rosca Alternada',          'Rosca com halteres alternando os bracos',                        4),
+('Rosca Concentrada',        'Isolamento unilateral do biceps sentado',                        4),
+('Rosca Scott',              'Rosca no banco Scott para maior controle do movimento',          4),
+('Rosca na Polia',           'Rosca no cabo com tensao constante',                             4),
+('Rosca Inclinada',          'Rosca com halteres em banco inclinado',                          4),
+('Rosca 21',                 'Metodo com repeticoes parciais e completas para biceps',         4),
+
+-- Triceps (5) - existentes
+('Triceps Pulley',           'Extensao no cabo para isolamento do triceps',                    5),
+('Triceps Frances',          'Extensao de testa com barra ou halteres',                        5),
+('Mergulho',                 'Exercicio composto para triceps e peitoral inferior',            5),
+-- Triceps (5) - novos
+('Triceps Corda',            'Extensao no cabo usando corda',                                  5),
+('Triceps Testa',            'Extensao de cotovelos deitado com barra ou halteres',            5),
+('Supino Fechado',           'Supino com pegada fechada enfatizando triceps',                  5),
+('Triceps Coice',            'Extensao unilateral de cotovelo com halter',                     5),
+('Triceps Banco',            'Mergulho entre bancos com foco em triceps',                      5),
+('Extensao Unilateral na Polia','Extensao de triceps unilateral no cabo',                      5),
+
+-- Pernas (6) - existentes
+('Agachamento',              'Movimento base para quadriceps, gluteos e isquiotibiais',        6),
+('Leg Press',                'Agachamento guiado na maquina',                                  6),
+('Cadeira Extensora',        'Isolamento de quadriceps na maquina',                            6),
+-- Pernas (6) - novos
+('Cadeira Flexora',          'Isolamento de posterior de coxa na maquina',                     6),
+('Mesa Flexora',             'Flexao de joelhos deitado para posteriores',                     6),
+('Avanco',                   'Passada unilateral para quadriceps e gluteos',                   6),
+('Stiff',                    'Movimento para posteriores, gluteos e lombar',                   6),
+('Panturrilha em Pe',        'Elevacao plantar em pe para gastrocnemio',                       6),
+('Hip Thrust',               'Elevacao de quadril com foco em gluteos',                        6),
+
+-- Abdomen (7) - existentes
+('Abdominal Crunch',         'Exercicio classico de flexao de tronco',                         7),
+('Prancha Isometrica',       'Estabilizacao do core sem movimento dinamico',                   7),
+-- Abdomen (7) - novos
+('Elevacao de Pernas',       'Exercicio para reto abdominal com foco na porcao inferior',      7),
+('Abdominal Infra',          'Flexao de quadril para abdomen inferior',                        7),
+('Abdominal Bicicleta',      'Movimento alternado para reto abdominal e obliquos',            7),
+('Prancha Lateral',          'Estabilizacao lateral com foco em obliquos',                     7),
+('Russian Twist',            'Rotacao de tronco para obliquos',                               7),
+('Abdominal na Polia',       'Flexao de tronco com carga na polia alta',                       7);
+GO
 
 -- ------------------------------------------------------------
 -- 11. SEED — Admin padrao
@@ -438,5 +501,6 @@ ORDER BY u.nm_cliente ASC;
 
 
 -- ============================================================
---  FIM DO SCRIPT v4
+--  FIM DO SCRIPT v8 - dt_inicio DEFAULT GETDATE(), dt_fim calculada,
+--  ON DELETE CASCADE em TreinoExercicio -> Treino e seeds expandidas
 -- ============================================================

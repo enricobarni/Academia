@@ -65,5 +65,8 @@ namespace LoginAcademia
             get { return estado; }
             set { estado = value; }
         }
+
+        [JsonPropertyName("erro")]
+        public bool ErroViaCep { get; set; }
     }
 }
