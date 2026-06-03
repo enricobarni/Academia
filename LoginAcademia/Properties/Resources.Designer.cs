@@ -123,6 +123,46 @@ namespace LoginAcademia.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconeHalter {
+            get {
+                object obj = ResourceManager.GetObject("iconeHalter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconeOlhoFechado {
+            get {
+                object obj = ResourceManager.GetObject("iconeOlhoFechado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconeOlhoFechado1 {
+            get {
+                object obj = ResourceManager.GetObject("iconeOlhoFechado1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconeOlhoFechadoDefinitivo {
+            get {
+                object obj = ResourceManager.GetObject("iconeOlhoFechadoDefinitivo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconesCep {
             get {
                 object obj = ResourceManager.GetObject("iconesCep", resourceCulture);
@@ -206,6 +246,16 @@ namespace LoginAcademia.Properties {
         internal static System.Drawing.Bitmap iconesUsuario2 {
             get {
                 object obj = ResourceManager.GetObject("iconesUsuario2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconeUsuario {
+            get {
+                object obj = ResourceManager.GetObject("iconeUsuario", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
