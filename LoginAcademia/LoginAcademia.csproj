@@ -133,11 +133,11 @@
     <Compile Include="IHMAdm2.Designer.cs">
       <DependentUpon>IHMAdm2.cs</DependentUpon>
     </Compile>
-    <Compile Include="IHMAdmMeio.cs">
+    <Compile Include="IHMAdm3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IHMAdmMeio.Designer.cs">
-      <DependentUpon>IHMAdmMeio.cs</DependentUpon>
+    <Compile Include="IHMAdm3.Designer.cs">
+      <DependentUpon>IHMAdm3.cs</DependentUpon>
     </Compile>
     <Compile Include="IHMCadastro.cs">
       <SubType>Form</SubType>
@@ -180,8 +180,8 @@
     <EmbeddedResource Include="IHMAdm2.resx">
       <DependentUpon>IHMAdm2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IHMAdmMeio.resx">
-      <DependentUpon>IHMAdmMeio.cs</DependentUpon>
+    <EmbeddedResource Include="IHMAdm3.resx">
+      <DependentUpon>IHMAdm3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IHMCadastro.resx">
       <DependentUpon>IHMCadastro.cs</DependentUpon>

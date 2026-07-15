@@ -316,7 +316,7 @@ namespace LoginAcademia
                 MessageBox.Show("Treino cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
-            IHMAdmMeio tela = new IHMAdmMeio(cdUsuarioSelecionado, nomeClienteSelecionado, adminLogado);
+            IHMAdm3 tela = new IHMAdm3(cdUsuarioSelecionado, nomeClienteSelecionado, adminLogado);
             tela.Show();
             this.Hide();
         }
@@ -330,7 +330,7 @@ namespace LoginAcademia
 
         private void btnMeusTreinos_Click(object sender, EventArgs e)
         {
-            IHMAdmMeio formTreino = new IHMAdmMeio(cdUsuarioSelecionado, nomeClienteSelecionado, adminLogado);
+            IHMAdm3 formTreino = new IHMAdm3(cdUsuarioSelecionado, nomeClienteSelecionado, adminLogado);
             formTreino.Show();
             this.Hide();
         }

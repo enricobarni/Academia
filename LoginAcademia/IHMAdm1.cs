@@ -76,7 +76,7 @@ namespace LoginAcademia
 
             if (coluna == "colEditar")
             {
-                IHMAdmMeio tela = new IHMAdmMeio(cdUsuario, nomeCliente, adminLogado);
+                IHMAdm3 tela = new IHMAdm3(cdUsuario, nomeCliente, adminLogado);
                 tela.Show();
                 this.Hide();
             }

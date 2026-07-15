@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace LoginAcademia
 {
-    public partial class IHMAdmMeio : Form
+    public partial class IHMAdm3 : Form
     {
         private int cdUsuarioSelecionado;
         private string nomeClienteSelecionado;
         private Login_Cadastro adminLogado;
 
-        public IHMAdmMeio()
+        public IHMAdm3()
         {
             InitializeComponent();
         }
 
-        public IHMAdmMeio(int cdUsuario, string nomeCliente, Login_Cadastro admin)
+        public IHMAdm3(int cdUsuario, string nomeCliente, Login_Cadastro admin)
         {
             InitializeComponent();
 
