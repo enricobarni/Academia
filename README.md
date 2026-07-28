@@ -492,7 +492,7 @@ Este sistema foi desenvolvido como atividade acadêmica do segundo bimestre, com
 <br>
 
 * GitHub: [Matheus-Deus](https://github.com/Matheus-Deus)
-* LinkedIn: []()
+* LinkedIn: [Matheus Cavalcanti](https://www.linkedin.com/in/matheus-deus/)
   
 <br>
 
